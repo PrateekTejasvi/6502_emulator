@@ -4,7 +4,6 @@
 typedef unsigned char Byte;
 typedef unsigned short Word;
 
-
 #define FLAG_C 0b00000001
 #define FLAG_Z 0b00000010
 #define FLAG_I 0b00000100
@@ -15,15 +14,14 @@ typedef unsigned short Word;
 #define FLAG_N 0b10000000
 
 typedef struct CPU { 
-    Byte PC; //program counter
-    Word SP;//stack pointer
+    Byte SP;//stack pointer
+    Word PC; //program counter
 
-    Byte A : 8; 
-    Byte Y : 8; 
-    Byte X : 8;
+    Byte A; 
+    Byte Y; 
+    Byte X;
 
 //Status flags - 8 bit 8 flags
-
     Byte Status;
 
 
@@ -47,7 +45,7 @@ void SetFlag(CPU *cpu,Byte flag , int value){
 
 void Reset(CPU *cpu, Mem *mem){
     cpu -> PC = mem->Data[0xFFFC] | (mem->Data[0xFFFD] << 8);
-    cpu -> SP = 0xFD;
+    cpu -> SP = 0xFD; //need to check on this might not be correct
     cpu -> A = 0; 
     cpu -> Y = 0; 
     cpu -> X = 0;
@@ -61,8 +59,37 @@ void Reset(CPU *cpu, Mem *mem){
     SetFlag(cpu,FLAG_U,0);
 
 }
+Byte ReadFromMem(CPU *cpu , Mem *mem,unsigned int *ticks,Word addr){
+    Byte data = mem->Data[addr];
+    (*ticks)--;
+return data;
+}
+
+Byte FetchByte(CPU *cpu , Mem *mem, unsigned int *ticks){
+    Word address = cpu -> PC;
+    Byte data = mem->Data[address];
+    cpu->PC = (cpu->PC + 1) & 0xFFFF;//same thing as +1 just adds masking for safety
+    (*ticks)--;
+    return data;
+}
 
 
+Word FetchWord(CPU *cpu , Mem *mem,unsigned int *ticks){
+    Word address = cpu -> PC; 
+    Byte lowByte = FetchByte(cpu , mem , ticks);
+    Byte highByte = FetchByte(cpu,mem,ticks);
+
+}
+
+
+//debugging
+void DumpCPU(CPU *cpu)
+{
+    printf("A:%02X X:%02X Y:%02X PC:%04X SP:%02X STATUS:%02X\n",
+           cpu->A, cpu->X, cpu->Y, cpu->PC, cpu->SP, cpu->Status);
+}
+
+//set initial memory to be zero
 void Init(Mem *mem){
     mem ->MAX_MEM = 1024 * 64;
     for(int i= 0 ; i < 1024 * 64 ; i++ ){
@@ -71,10 +98,15 @@ void Init(Mem *mem){
 
 }
 
-
-
-
 int main(){
     CPU cpu; 
+    Mem mem;
+    Init(&mem);
+    //test data pushing the program counter to 8000
+    mem.Data[0xFFFC] = 0x00; 
+    mem.Data[0xFFFD] = 0x80;
+    Reset(&cpu,&mem);
+    DumpCPU(&cpu);
+
     return 0;
 }
