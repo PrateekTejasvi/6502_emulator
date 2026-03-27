@@ -40,7 +40,6 @@ mem.Data[0x2000] = 0x99;
 
 mem.Data[0x8007] = INS_LDA_ZP_X;
 mem.Data[0x8008] = 0x10;
-cpu.X = 1;
 mem.Data[0x0011] = 0x77;
 
 mem.Data[0x8009] = INS_LDA_ABS_X;
@@ -52,12 +51,13 @@ mem.Data[0x800C] = INS_LDA_ABS_Y;
 mem.Data[0x800D] = 0x00;
 mem.Data[0x800E] = 0x40;
 
-cpu.Y = 2;
 
 mem.Data[0x4002] = 0xAB;
 
 
 Reset(&cpu,&mem);
+cpu.X = 1;
+cpu.Y = 2;
 
 Execute(&cpu,&mem,20);
 DumpCPU(&cpu);
