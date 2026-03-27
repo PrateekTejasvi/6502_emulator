@@ -50,7 +50,77 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 Execute_INS_LDA_ABS_Y(cpu,mem,&ticks,value);
                 break;
             }
+//INSTRUCTION SET FOR LDX
 
+            case INS_LDX_IM:{
+                Byte value = FetchByte(cpu,mem,&ticks);
+                Execute_INS_LDX_IM(cpu,mem,&ticks,value);
+                break;
+            }
+            
+            case INS_LDX_ZP:{
+                Byte ZP_Addr = FetchByte(cpu,mem,&ticks);
+                Byte ZP_Value = ReadFromMem(cpu,mem,&ticks,ZP_Addr);
+                Execute_INS_LDX_ZP(cpu,mem,&ticks,ZP_Value);
+                break;
+            }
+            case INS_LDX_ABS:{
+                 Word Addr = FetchWord(cpu,mem,&ticks);
+                 Byte Value = ReadFromMem(cpu,mem,&ticks,Addr);
+                 Execute_INS_LDX_ABS(cpu,mem,&ticks,Value);
+                 break;
+            }
+
+            case INS_LDX_ZP_Y:{
+                Byte addr = FetchByte(cpu,mem,&ticks);
+                Byte ZP_addr = (addr + cpu->Y) & 0xFF;
+                Byte value = ReadFromMem(cpu,mem,&ticks,ZP_addr);
+                Execute_INS_LDX_ZP_Y(cpu,mem,&ticks,value);
+                break;
+            }
+
+            case INS_LDX_ABS_Y:{
+                Word addr = FetchWord(cpu,mem,&ticks);
+                Word ABS_addr = (addr+cpu->Y);
+                Byte value = ReadFromMem(cpu,mem,&ticks,ABS_addr);
+                Execute_INS_LDX_ABS_Y(cpu,mem,&ticks,value);
+                break;
+            }
+
+//INSTRUCTION SET FOR LDY
+            case INS_LDY_IM:{
+                Byte Value = FetchByte(cpu,mem,&ticks);
+                Execute_INS_LDY_IM(cpu,mem,&ticks,Value);
+                break;
+            }
+            case INS_LDY_ZP:{
+                Byte ZP_Addr = FetchByte(cpu,mem,&ticks);
+                Byte ZP_Value = ReadFromMem(cpu,mem,&ticks,ZP_Addr);
+                Execute_INS_LDY_ZP(cpu,mem,&ticks,ZP_Value);
+                break;
+            }
+            
+            case INS_LDY_ZP_X:{
+                Byte addr = FetchByte(cpu,mem,&ticks);
+                Byte ZP_addr = (addr + cpu->X) & 0xFF;
+                Byte value = ReadFromMem(cpu,mem,&ticks,ZP_addr);
+                Execute_INS_LDY_ZP_X(cpu,mem,&ticks,value);
+                break;
+            }
+
+            case INS_LDY_ABS:{
+                 Word Addr = FetchWord(cpu,mem,&ticks);
+                 Byte Value = ReadFromMem(cpu,mem,&ticks,Addr);
+                 Execute_INS_LDY_ABS(cpu,mem,&ticks,Value);
+                break;
+            }
+            case INS_LDY_ABS_X:{
+                Word addr = FetchWord(cpu,mem,&ticks);
+                Word ABS_addr = (addr+cpu->X);
+                Byte value = ReadFromMem(cpu,mem,&ticks,ABS_addr);
+                Execute_INS_LDY_ABS_X(cpu,mem,&ticks,value);
+                break;
+            }
 
     }
 }
