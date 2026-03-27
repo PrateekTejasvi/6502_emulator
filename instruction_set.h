@@ -10,9 +10,9 @@
 #define INS_LDA_ABS_X 0xBD
 #define INS_LDA_ABS_Y 0xB9
 
-void Execute_INS_LDA_ZP(CPU *cpu , Mem *mem , unsigned int *ticks,Byte value);
-
 void Execute_INS_LDA_IM(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-
-
+void Execute_INS_LDA_ZP(CPU *cpu , Mem *mem , unsigned int *ticks,Byte value);
+void Execute_INS_LDA_ZP_X(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
 void Execute_INS_LDA_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
+void Execute_INS_LDA_ABS_X(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
+void Execute_INS_LDA_ABS_Y(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);

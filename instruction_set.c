@@ -22,3 +22,17 @@ void Execute_INS_LDA_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value){
     INS_LDA(cpu,value);
 
 }
+
+void Execute_INS_LDA_ZP_X(CPU *cpu, Mem *mem, unsigned int *ticks, Byte value){
+    INS_LDA(cpu,value);
+
+}
+void Execute_INS_LDA_ABS_X(CPU *cpu, Mem *mem, unsigned int *ticks, Byte value){
+    INS_LDA(cpu,value);
+
+}
+void Execute_INS_LDA_ABS_Y(CPU *cpu, Mem *mem, unsigned int *ticks, Byte value){
+    INS_LDA(cpu,value);
+
+}
+

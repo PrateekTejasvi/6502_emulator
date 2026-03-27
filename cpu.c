@@ -20,6 +20,38 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                     break;
             }
 
+            case INS_LDA_ABS:{
+                    Word ABS_address = FetchWord(cpu,mem,&ticks);
+                    Word ABS_Value = ReadFromMem(cpu,mem,&ticks,ABS_address);
+                    Execute_INS_LDA_ABS(cpu,mem,&ticks,ABS_Value);
+                break;
+            }
+
+            case INS_LDA_ZP_X:{
+                Byte addr = FetchByte(cpu,mem,&ticks);
+                addr = (addr + cpu->X) & 0xFF;
+                Byte value = ReadFromMem(cpu,mem,&ticks,addr);
+                Execute_INS_LDA_ZP_X(cpu,mem,&ticks,value);
+                break;
+            }
+//TODO:LDA_ABS_X/Y can take an extra clock cylce 4+1 depending on the wrapping
+            case INS_LDA_ABS_X:{
+                Word base = FetchWord(cpu,mem,&ticks);
+                Word addr = base + cpu->X;
+                Byte value = ReadFromMem(cpu,mem,&ticks,addr);
+                Execute_INS_LDA_ABS_X(cpu,mem,&ticks,value);
+                break;
+            }
+
+            case INS_LDA_ABS_Y:{
+                Word base = FetchWord(cpu,mem,&ticks);
+                Word addr = base + cpu->Y;
+                Byte value = ReadFromMem(cpu,mem,&ticks,addr);
+                Execute_INS_LDA_ABS_Y(cpu,mem,&ticks,value);
+                break;
+            }
+
+
     }
 }
 }
