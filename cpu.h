@@ -28,4 +28,5 @@ typedef struct CPU {
 
 void SetFlag(CPU *cpu,Byte flag , int value);
 
+void Execute(CPU *cpu , Mem *mem , unsigned int ticks);
 void Reset(CPU *cpu, Mem *mem);

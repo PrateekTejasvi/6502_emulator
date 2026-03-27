@@ -1,6 +1,6 @@
 #include<stdio.h> 
 #include<stdlib.h>
-
+#include"instruction_set.h"
 #include "cpu.h"
 #include "memory.h"
 
@@ -17,17 +17,24 @@ void DumpCPU(CPU *cpu)
 
 int main(){
 
-    CPU cpu; 
-    Mem mem;
+Mem mem;
+CPU cpu;
 
-    Init(&mem);
+Init(&mem);
 
-    mem.Data[0xFFFC] = 0x00; 
-    mem.Data[0xFFFD] = 0x80;
+mem.Data[0xFFFC] = 0x00;
+mem.Data[0xFFFD] = 0x80;
 
-    Reset(&cpu,&mem);
+mem.Data[0x8000] = INS_LDA_IM;
+mem.Data[0x8001] = 0x42;
 
-    DumpCPU(&cpu);
+mem.Data[0x8002] = INS_LDA_ZP;
+mem.Data[0x8003] = 0x10;
+mem.Data[0x0010] = 0x55;
 
-    return 0;
+
+Reset(&cpu,&mem);
+
+Execute(&cpu,&mem,20);
+DumpCPU(&cpu);
 }

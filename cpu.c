@@ -1,5 +1,28 @@
 #include "cpu.h"
+#include "instruction_set.h"
 #include "memory.h"
+
+
+void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
+    while(ticks > 0 ){
+        Byte Ins = FetchByte(cpu,mem,&ticks);
+        switch(Ins){
+            case INS_LDA_IM:{
+                Byte value = FetchByte(cpu,mem,&ticks);
+                Execute_INS_LDA_IM(cpu,mem,&ticks,value);
+                break;
+
+            }
+            case INS_LDA_ZP:{
+                    Byte ZP_addr = FetchByte(cpu,mem,&ticks);
+                    Byte ZP_value = ReadFromMem(cpu, mem, &ticks,ZP_addr);
+                    Execute_INS_LDA_ZP(cpu,mem,&ticks,ZP_value);
+                    break;
+            }
+
+    }
+}
+}
 
 void SetFlag(CPU *cpu,Byte flag , int value){
 
