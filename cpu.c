@@ -121,6 +121,9 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 Execute_INS_LDY_ABS_X(cpu,mem,&ticks,value);
                 break;
             }
+//INSTRUCTION SET FOR STA
+
+
 
     }
 }

@@ -43,3 +43,10 @@ Word FetchWord(CPU *cpu , Mem *mem,unsigned int *ticks){
 
     return value;
 }
+
+void WriteByte(CPU *cpu,Mem *mem,unsigned int *ticks,Word addr,Byte value){
+    mem -> Data[addr] = value;
+    (*ticks)--;
+}
+
+

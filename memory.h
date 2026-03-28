@@ -16,8 +16,10 @@ typedef struct Memory{
 
 void Init(Mem *mem);
 
-Byte ReadFromMem(CPU *cpu , Mem *mem,unsigned int *ticks,Word addr);
+Byte ReadFromMem(CPU*, Mem*,unsigned int*,Word);
 
-Byte FetchByte(CPU *cpu , Mem *mem, unsigned int *ticks);
+Byte FetchByte(CPU* , Mem*, unsigned int*);
 
-Word FetchWord(CPU *cpu , Mem *mem,unsigned int *ticks);
+Word FetchWord(CPU*, Mem*,unsigned int*);
+
+void WriteByte(CPU*,Mem*,unsigned int*,Word,Byte);

@@ -30,23 +30,29 @@
 
 
 //LDA INSTRUCTINS
-void Execute_INS_LDA_IM(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDA_ZP(CPU *cpu , Mem *mem , unsigned int *ticks,Byte value);
-void Execute_INS_LDA_ZP_X(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDA_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDA_ABS_X(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDA_ABS_Y(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
+void Execute_INS_LDA_IM(CPU*,Mem*,unsigned int*,Byte );
+void Execute_INS_LDA_ZP(CPU* , Mem* ,unsigned int *,Byte );
+void Execute_INS_LDA_ZP_X(CPU *,Mem *,unsigned int *,Byte );
+void Execute_INS_LDA_ABS(CPU *,Mem *,unsigned int *,Byte );
+void Execute_INS_LDA_ABS_X(CPU *,Mem *,unsigned int *,Byte );
+void Execute_INS_LDA_ABS_Y(CPU *,Mem *,unsigned int *,Byte );
 //LDX INSTRUCTIONS
-void Execute_INS_LDX_IM(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDX_ZP(CPU *cpu , Mem *mem , unsigned int *ticks,Byte value);
-void Execute_INS_LDX_ZP_Y(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDX_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDX_ABS_Y(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
+void Execute_INS_LDX_IM(CPU *,Mem *,unsigned int *,Byte );
+void Execute_INS_LDX_ZP(CPU * , Mem * , unsigned int *,Byte );
+void Execute_INS_LDX_ZP_Y(CPU *,Mem *,unsigned int *,Byte );
+void Execute_INS_LDX_ABS(CPU *,Mem *,unsigned int *,Byte );
+void Execute_INS_LDX_ABS_Y(CPU *,Mem *,unsigned int *,Byte );
 //LDY INSTRUCTIONS
-void Execute_INS_LDY_IM(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDY_ZP(CPU *cpu , Mem *mem , unsigned int *ticks,Byte value);
-void Execute_INS_LDY_ZP_X(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDY_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
-void Execute_INS_LDY_ABS_X(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value);
+void Execute_INS_LDY_IM(CPU *,Mem *,unsigned int *,Byte );
+void Execute_INS_LDY_ZP(CPU * , Mem * , unsigned int *,Byte );
+void Execute_INS_LDY_ZP_X(CPU *,Mem *,unsigned int *,Byte );
+void Execute_INS_LDY_ABS(CPU *,Mem *,unsigned int *,Byte );
+void Execute_INS_LDY_ABS_X(CPU *,Mem *,unsigned int *,Byte );
+//STA INSTRUCTIONS
+void Execute_INS_STA_ZP(CPU *,Mem *,unsigned int *,Word);
+void Execute_INS_STA_ZP_X(CPU *,Mem *,unsigned int *,Word);
+void Execute_INS_STA_ABS(CPU *,Mem *,unsigned int *,Word);
+void Execute_INS_STA_ABS_X(CPU *,Mem *,unsigned int *,Word);
+void Execute_INS_STA_ABS_Y(CPU *,Mem *,unsigned int *,Word);
 
 
