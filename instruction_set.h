@@ -21,6 +21,12 @@
 #define INS_LDY_ZP_X 0xB4
 #define INS_LDY_ABS 0xAC
 #define INS_LDY_ABS_X 0xBC
+//STA INSTRUCTIONS
+#define INS_STA_ZP    0x85
+#define INS_STA_ZP_X  0x95
+#define INS_STA_ABS   0x8D
+#define INS_STA_ABS_X 0x9D
+#define INS_STA_ABS_Y 0x99
 
 
 //LDA INSTRUCTINS
