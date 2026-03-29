@@ -1,5 +1,4 @@
 #pragma once
-
 #include "cpu.h"
 #include "memory.h"
 //LDA INSTRUCTIONS
@@ -38,16 +37,15 @@
 //TAX INSTRUCTION 
 #define INS_TAX_IMP 0xAA 
 //TAY INSTRUCTION
-#define INS_TAY 0xA8
+#define INS_TAY_IMP 0xA8
 //TSX INSTRUCTION
-#define INS_TSX 0xBA
+#define INS_TSX_IMP 0xBA
 //TXA INSTRUCTION 
-#define INS_TXA 0x8A
+#define INS_TXA_IMP 0x8A
 //TXS INSTRUCTION
-#define INS_TXS 0x9A
+#define INS_TXS_IMP 0x9A
 //TYA INSTRUCTION
-#define INS_TYA 0x98
-
+#define INS_TYA_IMP 0x98
 //LDA INSTRUCTINS
 void Execute_INS_LDA_IM(CPU*,Mem*,unsigned int*,Byte );
 void Execute_INS_LDA_ZP(CPU* , Mem* ,unsigned int *,Byte );

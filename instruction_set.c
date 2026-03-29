@@ -1,6 +1,4 @@
 #include"instruction_set.h"
-
-
 static void INS_LDA (CPU *cpu, Byte value){
     cpu->A = value;
     SetFlag(cpu,FLAG_Z,cpu->A == 0);
@@ -34,11 +32,37 @@ static void INS_TAX(CPU *cpu){
     cpu->X = cpu->A;
     SetFlag(cpu, FLAG_Z, cpu->X == 0);
     SetFlag(cpu,FLAG_N,cpu->X & 0x80);
+}
+static void INS_TXA(CPU *cpu){
+    cpu->A = cpu -> X; 
+    SetFlag(cpu,FLAG_Z,cpu->A == 0);
+    SetFlag(cpu,FLAG_N,cpu->A & 0x80);
+
 
 }
+static void INS_TAY(CPU *cpu){
+    cpu->Y = cpu->A;
+    SetFlag(cpu,FLAG_Z,cpu->Y == 0);
+    SetFlag(cpu,FLAG_N,cpu->Y & 0x80);
 
+}
+static void INS_TYA(CPU *cpu){
+    cpu->A = cpu->Y;
+    SetFlag(cpu,FLAG_Z,cpu->A == 0);
+    SetFlag(cpu,FLAG_N,cpu->A & 0x80);
 
+}
+static void INS_TSX(CPU *cpu){
+    cpu->X = cpu->SP;
+    SetFlag(cpu, FLAG_Z, cpu->X == 0);
+    SetFlag(cpu,FLAG_N,cpu->X & 0x80);
 
+}
+static void INS_TXS(CPU *cpu){
+    cpu->SP = cpu->X ;
+    //does not update flags
+
+}
 
 
 void Execute_INS_LDA_ZP(CPU *cpu, Mem *mem, unsigned int *ticks,Byte value){
@@ -157,7 +181,21 @@ void Execute_INS_STY_ZP_X(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
 void Execute_INS_STY_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
     INS_STY(cpu,mem,ticks,address);
 }
-
 void Execute_INS_TAX(CPU *cpu){
     INS_TAX(cpu);
+}
+void Execute_INS_TXA(CPU *cpu){
+    INS_TXA(cpu);
+}
+void Execute_INS_TAY(CPU *cpu){
+    INS_TAY(cpu);
+}
+void Execute_INS_TYA(CPU *cpu){
+    INS_TYA(cpu);
+}
+void Execute_INS_TSX(CPU *cpu){
+    INS_TSX(cpu);
+}
+void Execute_INS_TXS(CPU *cpu){
+    INS_TXS(cpu);
 }

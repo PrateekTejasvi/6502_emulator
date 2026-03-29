@@ -198,6 +198,33 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 ticks--;//aftering executing minus one more tick
                 break;
             }
+            case INS_TXA_IMP:{
+                Execute_INS_TXA(cpu);
+                ticks--;
+                break;
+                                
+            }
+             case INS_TAY_IMP:{
+                Execute_INS_TAY(cpu);
+                ticks--;
+                break;
+                                
+            } case INS_TYA_IMP:{
+                Execute_INS_TYA(cpu);
+                ticks--;
+                break;
+                                
+            } case INS_TSX_IMP:{
+                Execute_INS_TSX(cpu);
+                ticks--;
+                break;
+                                
+            } case INS_TXS_IMP:{
+                Execute_INS_TXS(cpu);
+                ticks--;
+                break;
+                                
+            }
 
     }
 }
