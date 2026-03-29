@@ -19,6 +19,19 @@ static void INS_LDY (CPU *cpu,Byte value){
     SetFlag(cpu,FLAG_Z,cpu->Y == 0);
     SetFlag(cpu,FLAG_N,cpu->Y & 0b10000000);
 }
+static void INS_STA (CPU *cpu,Mem *mem,unsigned int *ticks,Word addr){
+    WriteByte(cpu,mem,ticks,addr,cpu->A); 
+}
+
+static void INS_STX(CPU *cpu , Mem *mem,unsigned int *ticks,Word addr){
+    WriteByte(cpu,mem,ticks,addr,cpu->X);
+}
+static void INS_STY(CPU *cpu , Mem *mem , unsigned int *ticks,Word addr){
+    WriteByte(cpu,mem,ticks,addr,cpu->Y);
+}
+
+
+
 
 void Execute_INS_LDA_ZP(CPU *cpu, Mem *mem, unsigned int *ticks,Byte value){
     INS_LDA(cpu,value);
@@ -83,4 +96,46 @@ void Execute_INS_LDY_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value){
 }
 void Execute_INS_LDY_ABS_X(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value){
     INS_LDY(cpu,value);
+}
+
+
+
+void Execute_INS_STA_ZP(CPU *cpu, Mem *mem, unsigned int *ticks, Word address){
+    INS_STA(cpu,mem,ticks,address);
+
+}
+
+
+void Execute_INS_STA_ZP_X(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
+
+    INS_STA(cpu,mem,ticks,address);
+}
+
+
+void Execute_INS_STA_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
+
+    INS_STA(cpu,mem,ticks,address);
+}
+
+
+void Execute_INS_STA_ABS_X(CPU *cpu , Mem *mem,unsigned int *ticks,Word address){
+
+    INS_STA(cpu,mem,ticks,address);
+}
+
+
+void Execute_INS_STA_ABS_Y(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
+
+    INS_STA(cpu,mem,ticks,address);
+}
+
+void Execute_INS_STX_ZP(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
+    INS_STX(cpu,mem,ticks,address);
+}
+
+void Execute_INS_STX_ZP_Y(CPU *cpu , Mem *mem,unsigned int *ticks,Word address){
+    INS_STX(cpu,mem,ticks,address);
+}
+void Execute_INS_STX_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
+    INS_STX(cpu,mem,ticks,address);
 }

@@ -27,6 +27,14 @@
 #define INS_STA_ABS   0x8D
 #define INS_STA_ABS_X 0x9D
 #define INS_STA_ABS_Y 0x99
+//STX INSTRUCTIONS 
+#define INS_STX_ZP 0x86
+#define INS_STX_ZP_Y 0x96
+#define INS_STX_ABS 0x8E
+//STY INSTRUCTIONS
+#define INS_STY_ZP 84
+#define INS_STY_ZP_X 94
+#define INS_STY_ABS 8C
 
 
 //LDA INSTRUCTINS
@@ -54,5 +62,12 @@ void Execute_INS_STA_ZP_X(CPU *,Mem *,unsigned int *,Word);
 void Execute_INS_STA_ABS(CPU *,Mem *,unsigned int *,Word);
 void Execute_INS_STA_ABS_X(CPU *,Mem *,unsigned int *,Word);
 void Execute_INS_STA_ABS_Y(CPU *,Mem *,unsigned int *,Word);
-
+//STX INSTRUCTIONS
+void Execute_INS_STX_ZP(CPU*,Mem*,unsigned int *,Word);
+void Execute_INS_STX_ZP_Y(CPU*,Mem*,unsigned int*,Word); 
+void Execute_INS_STX_ABS(CPU*,Mem*,unsigned int*,Word);
+//STY INSTRUCTIONS
+void Execute_INS_STY_ZP(CPU*,Mem*,unsigned int*,Word);
+void Execute_INS_STY_ZP_X(CPU *,Mem*,unsigned int*,Word);
+void Execute_INS_STY_ABS(CPU*,Mem*,unsigned int*,Word);
 

@@ -1,10 +1,12 @@
 #include "cpu.h"
 #include "instruction_set.h"
 #include "memory.h"
-
+//TODO:major change to tackle is to ensure that ADDRESS calculation also takes a tick or clock cycle
+//right now it just assumes only instructions take a clock cycle
 
 void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
-    while(ticks > 0 ){
+    while(ticks > 0){
+        if(ticks == 0)break;
         Byte Ins = FetchByte(cpu,mem,&ticks);
         switch(Ins){
             case INS_LDA_IM:{
@@ -122,8 +124,58 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 break;
             }
 //INSTRUCTION SET FOR STA
+            case INS_STA_ZP:{
+                Byte address = FetchByte(cpu,mem,&ticks);
+                Execute_INS_STA_ZP(cpu,mem,&ticks,address);
+                break;
 
+            }
+            case INS_STA_ABS:{
+                Word Addr = FetchWord(cpu,mem,&ticks);
+                Execute_INS_STA_ABS(cpu,mem,&ticks,Addr);
+                break;
+            }
+            case INS_STA_ZP_X:{
+                Byte base = FetchByte(cpu,mem,&ticks);
+                Byte addr = (base + cpu->X) & 0xFF;
+                ticks--;
+                Execute_INS_STA_ZP_X(cpu,mem,&ticks,addr);
+                break;
+            }
 
+            case INS_STA_ABS_X:{
+                Word base = FetchWord(cpu,mem,&ticks);
+                Word addr = (base + cpu -> X) ;
+                ticks--;
+                Execute_INS_STA_ABS_X(cpu,mem,&ticks,addr);
+                break;
+            }
+            
+            case INS_STA_ABS_Y:{
+                Word base = FetchWord(cpu,mem,&ticks);
+                Word addr = (base+ cpu -> Y);
+                ticks--;
+                Execute_INS_STA_ABS_Y(cpu,mem,&ticks,addr);
+                break;
+            }
+//INSTRUCTION SET FOR STX
+            case INS_STX_ZP:{
+                Byte addr = FetchByte(cpu,mem,&ticks);
+                Execute_INS_STX_ZP(cpu,mem,&ticks,addr);
+                break;
+            }
+            case INS_STX_ZP_Y:{
+                Byte addr = FetchByte(cpu,mem,&ticks);
+                addr = (addr +  cpu->Y) & 0xFF;
+                Execute_INS_STX_ZP_Y(cpu,mem,&ticks,addr);
+                break;
+            }
+            case INS_STX_ABS:{
+                Word addr = FetchWord(cpu,mem,&ticks);
+                Execute_INS_STX_ABS(cpu,mem,&ticks,addr);
+                break;
+            }
+//INSTRUCTION SET FOR STY
 
     }
 }
