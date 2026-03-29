@@ -30,6 +30,14 @@ static void INS_STY(CPU *cpu , Mem *mem , unsigned int *ticks,Word addr){
     WriteByte(cpu,mem,ticks,addr,cpu->Y);
 }
 
+static void INS_TAX(CPU *cpu){
+    cpu->X = cpu->A;
+    SetFlag(cpu, FLAG_Z, cpu->X == 0);
+    SetFlag(cpu,FLAG_N,cpu->X & 0x80);
+
+}
+
+
 
 
 
@@ -138,4 +146,18 @@ void Execute_INS_STX_ZP_Y(CPU *cpu , Mem *mem,unsigned int *ticks,Word address){
 }
 void Execute_INS_STX_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
     INS_STX(cpu,mem,ticks,address);
+}
+
+void Execute_INS_STY_ZP(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
+    INS_STY(cpu,mem,ticks,address);
+}
+void Execute_INS_STY_ZP_X(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
+    INS_STY(cpu,mem,ticks,address);
+}
+void Execute_INS_STY_ABS(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){
+    INS_STY(cpu,mem,ticks,address);
+}
+
+void Execute_INS_TAX(CPU *cpu){
+    INS_TAX(cpu);
 }

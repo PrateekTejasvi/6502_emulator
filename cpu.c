@@ -176,6 +176,28 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 break;
             }
 //INSTRUCTION SET FOR STY
+            case INS_STY_ZP:{
+                Byte addr = FetchByte(cpu,mem,&ticks);
+                Execute_INS_STY_ZP(cpu,mem,&ticks,addr);
+                break;
+            }
+            case INS_STY_ZP_X:{
+                Byte addr = FetchByte(cpu,mem,&ticks);
+                addr = (addr +  cpu->X) & 0xFF;
+                Execute_INS_STY_ZP_X(cpu,mem,&ticks,addr);
+                break;
+            }
+            case INS_STY_ABS:{
+                Word addr = FetchWord(cpu,mem,&ticks);
+                Execute_INS_STY_ABS(cpu,mem,&ticks,addr);
+                break;
+            }
+//INSTRUCTION SET FOR TAX 
+            case INS_TAX_IMP:{
+                Execute_INS_TAX(cpu);
+                ticks--;//aftering executing minus one more tick
+                break;
+            }
 
     }
 }

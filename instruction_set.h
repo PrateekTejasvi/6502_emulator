@@ -32,10 +32,21 @@
 #define INS_STX_ZP_Y 0x96
 #define INS_STX_ABS 0x8E
 //STY INSTRUCTIONS
-#define INS_STY_ZP 84
-#define INS_STY_ZP_X 94
-#define INS_STY_ABS 8C
-
+#define INS_STY_ZP 0x84
+#define INS_STY_ZP_X 0x94
+#define INS_STY_ABS 0x8C
+//TAX INSTRUCTION 
+#define INS_TAX_IMP 0xAA 
+//TAY INSTRUCTION
+#define INS_TAY 0xA8
+//TSX INSTRUCTION
+#define INS_TSX 0xBA
+//TXA INSTRUCTION 
+#define INS_TXA 0x8A
+//TXS INSTRUCTION
+#define INS_TXS 0x9A
+//TYA INSTRUCTION
+#define INS_TYA 0x98
 
 //LDA INSTRUCTINS
 void Execute_INS_LDA_IM(CPU*,Mem*,unsigned int*,Byte );
@@ -70,4 +81,10 @@ void Execute_INS_STX_ABS(CPU*,Mem*,unsigned int*,Word);
 void Execute_INS_STY_ZP(CPU*,Mem*,unsigned int*,Word);
 void Execute_INS_STY_ZP_X(CPU *,Mem*,unsigned int*,Word);
 void Execute_INS_STY_ABS(CPU*,Mem*,unsigned int*,Word);
-
+//TRANSFER INSTRUCTIONS
+void Execute_INS_TAX(CPU*);
+void Execute_INS_TAY(CPU*);
+void Execute_INS_TSX(CPU*);
+void Execute_INS_TXA(CPU*);
+void Execute_INS_TXS(CPU*);
+void Execute_INS_TYA(CPU*);
