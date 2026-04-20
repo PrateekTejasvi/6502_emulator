@@ -261,3 +261,6 @@ void Reset(CPU *cpu, Mem *mem){
     SetFlag(cpu,FLAG_U,0);
 
 }
+
+
+
