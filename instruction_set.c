@@ -3,9 +3,7 @@ static void INS_LDA (CPU *cpu, Byte value){
     cpu->A = value;
     SetFlag(cpu,FLAG_Z,cpu->A == 0);
     SetFlag(cpu,FLAG_N,cpu->A & 0b10000000);
-
 }
-
 static void INS_LDX (CPU *cpu, Byte value){
     cpu->X = value;
     SetFlag(cpu,FLAG_Z,cpu->X == 0);
@@ -18,7 +16,7 @@ static void INS_LDY (CPU *cpu,Byte value){
     SetFlag(cpu,FLAG_N,cpu->Y & 0b10000000);
 }
 static void INS_STA (CPU *cpu,Mem *mem,unsigned int *ticks,Word addr){
-    WriteByte(cpu,mem,ticks,addr,cpu->A); 
+    WriteByte(cpu,mem,ticks,addr,cpu->A);
 }
 
 static void INS_STX(CPU *cpu , Mem *mem,unsigned int *ticks,Word addr){
@@ -34,7 +32,7 @@ static void INS_TAX(CPU *cpu){
     SetFlag(cpu,FLAG_N,cpu->X & 0x80);
 }
 static void INS_TXA(CPU *cpu){
-    cpu->A = cpu -> X; 
+    cpu->A = cpu -> X;
     SetFlag(cpu,FLAG_Z,cpu->A == 0);
     SetFlag(cpu,FLAG_N,cpu->A & 0x80);
 
@@ -63,7 +61,6 @@ static void INS_TXS(CPU *cpu){
     //does not update flags
 
 }
-
 
 void Execute_INS_LDA_ZP(CPU *cpu, Mem *mem, unsigned int *ticks,Byte value){
     INS_LDA(cpu,value);

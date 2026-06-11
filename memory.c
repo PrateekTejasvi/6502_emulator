@@ -49,4 +49,63 @@ void WriteByte(CPU *cpu,Mem *mem,unsigned int *ticks,Word addr,Byte value){
     (*ticks)--;
 }
 
+Byte addr_immediate(CPU *cpu, Mem *mem, unsigned int *ticks){
+    return FetchByte(cpu,mem,ticks);
+}
 
+Byte addr_zero_page(CPU *cpu, Mem *mem, unsigned int *ticks){
+    Word zero_page_addr = FetchByte(cpu,mem,ticks);
+    Byte data = ReadFromMem(cpu, mem,ticks,zero_page_addr);
+    return data;
+
+}
+
+Byte addr_zero_page_x(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Word zero_page_addr = FetchByte(cpu,mem,ticks);
+    (*ticks)--;
+    Byte data = ReadFromMem(cpu,mem,ticks,(zero_page_addr+cpu->X)&0xFF);
+    return data;
+
+}
+
+Byte addr_zero_page_y(CPU *cpu , Mem *mem,unsigned int *ticks){
+    Word zero_page_addr = FetchByte(cpu,mem,ticks);
+    (*ticks)--;
+    Byte data = ReadFromMem(cpu,mem,ticks,(zero_page_addr+cpu->Y)&0xFF);
+    return data;
+}
+
+Byte addr_absolute(CPU *cpu, Mem *mem, unsigned int *ticks){
+    Byte lowByte = FetchByte(cpu, mem, ticks);
+    Byte highByte = FetchByte(cpu,mem,ticks);
+    Word address = lowByte | (highByte<<8);
+    Byte value = ReadFromMem(cpu, mem, ticks, address);
+    return value;
+}
+
+
+Byte addr_absolute_x(CPU *cpu, Mem *mem, unsigned int *ticks){
+    Byte lowByte = FetchByte(cpu,mem,ticks);
+    Byte highByte = FetchByte(cpu, mem, ticks);
+    Word base_address = lowByte | (highByte<<8);
+    Word final_address = base_address + cpu->X;
+    if((final_address >> 8) != (base_address>>8)){
+        (*ticks)--;
+    }
+    Byte value = ReadFromMem(cpu, mem,ticks, final_address);
+    return value;
+
+}
+
+
+Byte addr_absolute_y(CPU *cpu, Mem *mem, unsigned int *ticks){
+    Byte lowByte = FetchByte(cpu, mem, ticks);
+    Byte highByte=FetchByte(cpu,mem,ticks);
+    Word base_address = lowByte | (highByte << 8);
+    Word final_address = base_address + cpu -> Y;
+    if((final_address >> 8) != (base_address>>8)){
+        (*ticks)--;
+    }
+    Byte value = ReadFromMem(cpu, mem, ticks, final_address);
+    return value;
+}

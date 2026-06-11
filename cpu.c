@@ -1,31 +1,31 @@
 #include "cpu.h"
 #include "instruction_set.h"
 #include "memory.h"
+#include <complex.h>
+#include <stdint.h>
 //TODO:major change to tackle is to ensure that ADDRESS calculation also takes a tick or clock cycle
 //right now it just assumes only instructions take a clock cycle
 
+
 void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
+
     while(ticks > 0){
         if(ticks == 0)break;
         Byte Ins = FetchByte(cpu,mem,&ticks);
         switch(Ins){
             case INS_LDA_IM:{
-                Byte value = FetchByte(cpu,mem,&ticks);
+                Byte value = addr_immediate(cpu,mem, &ticks);
                 Execute_INS_LDA_IM(cpu,mem,&ticks,value);
                 break;
-
             }
             case INS_LDA_ZP:{
-                    Byte ZP_addr = FetchByte(cpu,mem,&ticks);
-                    Byte ZP_value = ReadFromMem(cpu, mem, &ticks,ZP_addr);
-                    Execute_INS_LDA_ZP(cpu,mem,&ticks,ZP_value);
+                    Byte value  = addr_zero_page(cpu, mem,&ticks);
+                    Execute_INS_LDA_IM(cpu, mem, &ticks, value);
                     break;
             }
-
             case INS_LDA_ABS:{
-                    Word ABS_address = FetchWord(cpu,mem,&ticks);
-                    Word ABS_Value = ReadFromMem(cpu,mem,&ticks,ABS_address);
-                    Execute_INS_LDA_ABS(cpu,mem,&ticks,ABS_Value);
+                    Byte value = addr_absolute(cpu, mem, &ticks);
+                    Execute_INS_LDA_ABS(cpu,mem,&ticks,value);
                 break;
             }
 
@@ -59,7 +59,7 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 Execute_INS_LDX_IM(cpu,mem,&ticks,value);
                 break;
             }
-            
+
             case INS_LDX_ZP:{
                 Byte ZP_Addr = FetchByte(cpu,mem,&ticks);
                 Byte ZP_Value = ReadFromMem(cpu,mem,&ticks,ZP_Addr);
@@ -101,7 +101,6 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 Execute_INS_LDY_ZP(cpu,mem,&ticks,ZP_Value);
                 break;
             }
-            
             case INS_LDY_ZP_X:{
                 Byte addr = FetchByte(cpu,mem,&ticks);
                 Byte ZP_addr = (addr + cpu->X) & 0xFF;
@@ -150,7 +149,7 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 Execute_INS_STA_ABS_X(cpu,mem,&ticks,addr);
                 break;
             }
-            
+
             case INS_STA_ABS_Y:{
                 Word base = FetchWord(cpu,mem,&ticks);
                 Word addr = (base+ cpu -> Y);
@@ -192,7 +191,7 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 Execute_INS_STY_ABS(cpu,mem,&ticks,addr);
                 break;
             }
-//INSTRUCTION SET FOR TAX 
+//INSTRUCTION SET FOR TAX
             case INS_TAX_IMP:{
                 Execute_INS_TAX(cpu);
                 ticks--;//aftering executing minus one more tick
@@ -202,30 +201,24 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 Execute_INS_TXA(cpu);
                 ticks--;
                 break;
-                                
             }
              case INS_TAY_IMP:{
                 Execute_INS_TAY(cpu);
                 ticks--;
                 break;
-                                
             } case INS_TYA_IMP:{
                 Execute_INS_TYA(cpu);
                 ticks--;
                 break;
-                                
             } case INS_TSX_IMP:{
                 Execute_INS_TSX(cpu);
                 ticks--;
                 break;
-                                
             } case INS_TXS_IMP:{
                 Execute_INS_TXS(cpu);
                 ticks--;
                 break;
-                                
             }
-
     }
 }
 }
@@ -235,10 +228,9 @@ void SetFlag(CPU *cpu,Byte flag , int value){
     if(value){
         cpu->Status |= flag;
     }
-    else{ 
+    else{
         cpu->Status &= ~flag;
     }
-
 }
 
 void Reset(CPU *cpu, Mem *mem){
@@ -247,8 +239,8 @@ void Reset(CPU *cpu, Mem *mem){
 
     cpu->SP = 0xFD;
 
-    cpu->A = 0; 
-    cpu->Y = 0; 
+    cpu->A = 0;
+    cpu->Y = 0;
     cpu->X = 0;
 
     SetFlag(cpu,FLAG_C,0);
@@ -259,8 +251,4 @@ void Reset(CPU *cpu, Mem *mem){
     SetFlag(cpu,FLAG_Z,0);
     SetFlag(cpu,FLAG_V,0);
     SetFlag(cpu,FLAG_U,0);
-
 }
-
-
-
