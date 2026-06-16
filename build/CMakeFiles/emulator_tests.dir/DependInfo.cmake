@@ -1,0 +1,29 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/prateektejasvi/programs/6502/src/cpu.c" "CMakeFiles/emulator_tests.dir/src/cpu.c.o" "gcc" "CMakeFiles/emulator_tests.dir/src/cpu.c.o.d"
+  "/Users/prateektejasvi/programs/6502/src/instruction_set.c" "CMakeFiles/emulator_tests.dir/src/instruction_set.c.o" "gcc" "CMakeFiles/emulator_tests.dir/src/instruction_set.c.o.d"
+  "/Users/prateektejasvi/programs/6502/src/memory.c" "CMakeFiles/emulator_tests.dir/src/memory.c.o" "gcc" "CMakeFiles/emulator_tests.dir/src/memory.c.o.d"
+  "/Users/prateektejasvi/programs/6502/tests/test_lda.cpp" "CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o" "gcc" "CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o.d"
+  "/Users/prateektejasvi/programs/6502/tests/test_ldx.cpp" "CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o" "gcc" "CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o.d"
+  "/Users/prateektejasvi/programs/6502/tests/test_main.cpp" "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o" "gcc" "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o.d"
+  "/Users/prateektejasvi/programs/6502/tests/test_transfer.cpp" "CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o" "gcc" "CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")
