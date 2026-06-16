@@ -59,7 +59,6 @@ static void INS_TSX(CPU *cpu){
 static void INS_TXS(CPU *cpu){
     cpu->SP = cpu->X ;
     //does not update flags
-
 }
 
 void Execute_INS_LDA(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value){

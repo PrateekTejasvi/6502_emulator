@@ -27,7 +27,8 @@ typedef struct CPU {
 
 
 }CPU;
-
+typedef Byte (*ReadMode)(CPU *cpu,Mem *,unsigned int *ticks);
+typedef Word (*WriteMode)(CPU *cpu,Mem *,unsigned int *ticks);
 void SetFlag(CPU *cpu,Byte flag , int value);
 void Execute(CPU *cpu , Mem *mem , unsigned int ticks);
 void Reset(CPU *cpu, Mem *mem);
