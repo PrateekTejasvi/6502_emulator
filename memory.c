@@ -125,26 +125,20 @@ Word addr_zp_x_write(CPU *cpu,Mem *mem,unsigned int *ticks){
 }
 
 Word addr_abs_write(CPU *cpu, Mem *mem, unsigned int *ticks){
-    Byte lowByte = FetchByte(cpu, mem, ticks);
-    Byte highByte = FetchByte(cpu,mem,ticks);
-    Word address = lowByte | (highByte<<8);
+    Word address = FetchWord(cpu, mem, ticks);
     return address;
 
 }
 
 Word addr_abs_x_write(CPU *cpu, Mem *mem, unsigned int *ticks){
-    Byte lowByte = FetchByte(cpu, mem, ticks);
-    Byte highByte = FetchByte(cpu,mem,ticks);
-    Word base_address = lowByte | (highByte<<8);
+    Word base_address = FetchWord(cpu, mem, ticks);
     Word final_address = base_address + cpu->X;
     (*ticks)--;
     return final_address;
 
 }
 Word addr_abs_y_write(CPU *cpu, Mem *mem, unsigned int *ticks){
-    Byte lowByte = FetchByte(cpu, mem, ticks);
-    Byte highByte = FetchByte(cpu,mem,ticks);
-    Word base_address = lowByte | (highByte<<8);
+    Word base_address = FetchWord(cpu, mem, ticks);
     Word final_address = base_address + cpu->Y;
     (*ticks)--;
     return final_address;
