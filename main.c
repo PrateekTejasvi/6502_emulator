@@ -1,7 +1,7 @@
-#include<stdio.h> 
+#include<stdio.h>
 #include<stdlib.h>
-#include"instruction_set.h"
-#include "cpu.h"
+#include"include/instruction_set.h"
+#include "include/cpu.h"
 #include "memory.h"
 
 void DumpCPU(CPU *cpu)
