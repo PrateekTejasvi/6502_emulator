@@ -15,154 +15,154 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
         switch(Ins){
             case INS_LDA_IM:{
                 Byte value = addr_immediate(cpu,mem, &ticks);
-                Execute_INS_LDA_IM(cpu,mem,&ticks,value);
+                Execute_INS_LDA(cpu,mem,&ticks,value);
                 break;
             }
             case INS_LDA_ZP:{
                     Byte value  = addr_zero_page(cpu, mem,&ticks);
-                    Execute_INS_LDA_ZP(cpu, mem, &ticks, value);
+                    Execute_INS_LDA(cpu, mem, &ticks, value);
                     break;
             }
             case INS_LDA_ABS:{
                     Byte value = addr_absolute(cpu, mem, &ticks);
-                    Execute_INS_LDA_ABS(cpu,mem,&ticks,value);
+                    Execute_INS_LDA(cpu,mem,&ticks,value);
                 break;
             }
 
             case INS_LDA_ZP_X:{
                 Byte value = addr_zero_page_x(cpu, mem, &ticks);
-                Execute_INS_LDA_ZP_X(cpu,mem,&ticks,value);
+                Execute_INS_LDA(cpu,mem,&ticks,value);
                 break;
             }
 //TODO:LDA_ABS_X/Y can take an extra clock cylce 4+1 depending on the wrapping
             case INS_LDA_ABS_X:{
                 Byte value = addr_absolute_x(cpu, mem, &ticks);
-                Execute_INS_LDA_ABS_X(cpu,mem,&ticks,value);
+                Execute_INS_LDA(cpu,mem,&ticks,value);
                 break;
             }
 
             case INS_LDA_ABS_Y:{
                 Byte value = addr_absolute_y(cpu,mem,&ticks);
-                Execute_INS_LDA_ABS_Y(cpu,mem,&ticks,value);
+                Execute_INS_LDA(cpu,mem,&ticks,value);
                 break;
             }
 //INSTRUCTION SET FOR LDX
 
             case INS_LDX_IM:{
                 Byte value = addr_immediate(cpu,mem,&ticks);
-                Execute_INS_LDX_IM(cpu,mem,&ticks,value);
+                Execute_INS_LDX(cpu,mem,&ticks,value);
                 break;
             }
 
             case INS_LDX_ZP:{
                 Byte ZP_Value = addr_zero_page(cpu,mem,&ticks);
-                Execute_INS_LDX_ZP(cpu,mem,&ticks,ZP_Value);
+                Execute_INS_LDX(cpu,mem,&ticks,ZP_Value);
                 break;
             }
             case INS_LDX_ABS:{
                  Byte Value = addr_absolute(cpu, mem, &ticks);
-                 Execute_INS_LDX_ABS(cpu,mem,&ticks,Value);
+                 Execute_INS_LDX(cpu,mem,&ticks,Value);
                  break;
             }
 
             case INS_LDX_ZP_Y:{
                 Byte value = addr_zero_page_y(cpu, mem, &ticks);
-                Execute_INS_LDX_ZP_Y(cpu,mem,&ticks,value);
+                Execute_INS_LDX(cpu,mem,&ticks,value);
                 break;
             }
 
             case INS_LDX_ABS_Y:{
                 Byte value = addr_absolute_y(cpu, mem, &ticks);
-                Execute_INS_LDX_ABS_Y(cpu,mem,&ticks,value);
+                Execute_INS_LDX(cpu,mem,&ticks,value);
                 break;
             }
 
 //INSTRUCTION SET FOR LDY
             case INS_LDY_IM:{
                 Byte Value = addr_immediate(cpu, mem, &ticks);
-                Execute_INS_LDY_IM(cpu,mem,&ticks,Value);
+                Execute_INS_LDY(cpu,mem,&ticks,Value);
                 break;
             }
             case INS_LDY_ZP:{
                 Byte ZP_Value = addr_zero_page(cpu,mem,&ticks);
-                Execute_INS_LDY_ZP(cpu,mem,&ticks,ZP_Value);
+                Execute_INS_LDY(cpu,mem,&ticks,ZP_Value);
                 break;
             }
             case INS_LDY_ZP_X:{
                 Byte value = addr_zero_page_x(cpu, mem, &ticks);
-                Execute_INS_LDY_ZP_X(cpu,mem,&ticks,value);
+                Execute_INS_LDY(cpu,mem,&ticks,value);
                 break;
             }
 
             case INS_LDY_ABS:{
                  Byte Value = addr_absolute(cpu, mem, &ticks);
-                 Execute_INS_LDY_ABS(cpu,mem,&ticks,Value);
+                 Execute_INS_LDY(cpu,mem,&ticks,Value);
                 break;
             }
             case INS_LDY_ABS_X:{
                 Byte value = addr_absolute_x(cpu, mem, &ticks);
-                Execute_INS_LDY_ABS_X(cpu,mem,&ticks,value);
+                Execute_INS_LDY(cpu,mem,&ticks,value);
                 break;
             }
 //INSTRUCTION SET FOR STA
             case INS_STA_ZP:{
                 Byte address = addr_zp_write(cpu, mem, &ticks);
-                Execute_INS_STA_ZP(cpu,mem,&ticks,address);
+                Execute_INS_STA(cpu,mem,&ticks,address);
                 break;
 
             }
             case INS_STA_ABS:{
                 Word Addr = addr_abs_write(cpu, mem, &ticks);
-                Execute_INS_STA_ABS(cpu,mem,&ticks,Addr);
+                Execute_INS_STA(cpu,mem,&ticks,Addr);
                 break;
             }
             case INS_STA_ZP_X:{
                 Byte addr = addr_zp_x_write(cpu,mem,&ticks);
-                Execute_INS_STA_ZP_X(cpu,mem,&ticks,addr);
+                Execute_INS_STA(cpu,mem,&ticks,addr);
                 break;
             }
 
             case INS_STA_ABS_X:{
                 Word addr = addr_abs_x_write(cpu,mem,&ticks);
-                Execute_INS_STA_ABS_X(cpu,mem,&ticks,addr);
+                Execute_INS_STA(cpu,mem,&ticks,addr);
                 break;
             }
 
             case INS_STA_ABS_Y:{
                 Word addr = addr_abs_y_write(cpu,mem,&ticks);
-                Execute_INS_STA_ABS_Y(cpu,mem,&ticks,addr);
+                Execute_INS_STA(cpu,mem,&ticks,addr);
                 break;
             }
 //INSTRUCTION SET FOR STX
             case INS_STX_ZP:{
                 Byte addr = addr_zp_write(cpu,mem,&ticks);
-                Execute_INS_STX_ZP(cpu,mem,&ticks,addr);
+                Execute_INS_STX(cpu,mem,&ticks,addr);
                 break;
             }
             case INS_STX_ZP_Y:{
                 Byte addr = addr_zp_y_write(cpu,mem,&ticks);
-                Execute_INS_STX_ZP_Y(cpu,mem,&ticks,addr);
+                Execute_INS_STX(cpu,mem,&ticks,addr);
                 break;
             }
             case INS_STX_ABS:{
                 Word addr = addr_abs_write(cpu, mem, &ticks);
-                Execute_INS_STX_ABS(cpu,mem,&ticks,addr);
+                Execute_INS_STX(cpu,mem,&ticks,addr);
                 break;
             }
 //INSTRUCTION SET FOR STY
             case INS_STY_ZP:{
                 Byte addr = addr_zp_write(cpu,mem,&ticks);
-                Execute_INS_STY_ZP(cpu,mem,&ticks,addr);
+                Execute_INS_STY(cpu,mem,&ticks,addr);
                 break;
             }
             case INS_STY_ZP_X:{
                 Byte addr = addr_zp_x_write(cpu,mem,&ticks);
-                Execute_INS_STY_ZP_X(cpu,mem,&ticks,addr);
+                Execute_INS_STY(cpu,mem,&ticks,addr);
                 break;
             }
             case INS_STY_ABS:{
                 Word addr = addr_abs_write(cpu,mem,&ticks);
-                Execute_INS_STY_ABS(cpu,mem,&ticks,addr);
+                Execute_INS_STY(cpu,mem,&ticks,addr);
                 break;
             }
 //INSTRUCTION SET FOR TAX

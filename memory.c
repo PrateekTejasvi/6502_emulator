@@ -123,6 +123,12 @@ Word addr_zp_x_write(CPU *cpu,Mem *mem,unsigned int *ticks){
     (*ticks)--;
     return (Word)final_address;
 }
+Word addr_zp_y_write(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte base_address = FetchByte(cpu,mem,ticks);
+    Byte final_address = (base_address + cpu -> Y) & 0xFF;
+    (*ticks)--;
+    return (Word)final_address;
+}
 
 Word addr_abs_write(CPU *cpu, Mem *mem, unsigned int *ticks){
     Word address = FetchWord(cpu, mem, ticks);

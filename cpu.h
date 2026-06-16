@@ -13,26 +13,21 @@ typedef unsigned short Word;
 #define FLAG_V 0b01000000
 #define FLAG_N 0b10000000
 
-typedef void (*InstructionHandler)(CPU *cpu,Mem *mem,unsigned int *ticks);
 
-typedef struct CPU { 
+typedef struct CPU {
 
     Byte SP;
     Word PC;
 
-    Byte A; 
-    Byte Y; 
+    Byte A;
+    Byte Y;
     Byte X;
 
     Byte Status;
-    InstructionHandler handlers[256];
-    
 
-}CPU; 
+
+}CPU;
 
 void SetFlag(CPU *cpu,Byte flag , int value);
 void Execute(CPU *cpu , Mem *mem , unsigned int ticks);
 void Reset(CPU *cpu, Mem *mem);
-
-void register_instructions(CPU *cpu,Mem* mem, InstructionHandler handler);
-void register_all_instructions(CPU *cpu);
