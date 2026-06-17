@@ -6,7 +6,6 @@
 //TODO:major change to tackle is to ensure that ADDRESS calculation also takes a tick or clock cycle
 //right now it just assumes only instructions take a clock cycle
 
-
 void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
 
     while(ticks > 0){

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libemulator_core.a CMakeFiles/emulator_core.dir/src/cpu.c.o CMakeFiles/emulator_core.dir/src/memory.c.o CMakeFiles/emulator_core.dir/src/instruction_set.c.o
+/usr/bin/ranlib libemulator_core.a

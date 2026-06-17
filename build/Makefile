@@ -127,6 +127,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named emulator_core
+
+# Build rule for target.
+emulator_core: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emulator_core
+.PHONY : emulator_core
+
+# fast build rule for target.
+emulator_core/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/build
+.PHONY : emulator_core/fast
+
+#=============================================================================
+# Target rules for targets named emulator
+
+# Build rule for target.
+emulator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emulator
+.PHONY : emulator
+
+# fast build rule for target.
+emulator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator.dir/build.make CMakeFiles/emulator.dir/build
+.PHONY : emulator/fast
+
+#=============================================================================
 # Target rules for targets named emulator_tests
 
 # Build rule for target.
@@ -139,12 +165,36 @@ emulator_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/build
 .PHONY : emulator_tests/fast
 
+main.o: main.c.o
+.PHONY : main.o
+
+# target to build an object file
+main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator.dir/build.make CMakeFiles/emulator.dir/main.c.o
+.PHONY : main.c.o
+
+main.i: main.c.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator.dir/build.make CMakeFiles/emulator.dir/main.c.i
+.PHONY : main.c.i
+
+main.s: main.c.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator.dir/build.make CMakeFiles/emulator.dir/main.c.s
+.PHONY : main.c.s
+
 src/cpu.o: src/cpu.c.o
 .PHONY : src/cpu.o
 
 # target to build an object file
 src/cpu.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/src/cpu.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/cpu.c.o
 .PHONY : src/cpu.c.o
 
 src/cpu.i: src/cpu.c.i
@@ -152,7 +202,7 @@ src/cpu.i: src/cpu.c.i
 
 # target to preprocess a source file
 src/cpu.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/src/cpu.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/cpu.c.i
 .PHONY : src/cpu.c.i
 
 src/cpu.s: src/cpu.c.s
@@ -160,7 +210,7 @@ src/cpu.s: src/cpu.c.s
 
 # target to generate assembly for a file
 src/cpu.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/src/cpu.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/cpu.c.s
 .PHONY : src/cpu.c.s
 
 src/instruction_set.o: src/instruction_set.c.o
@@ -168,7 +218,7 @@ src/instruction_set.o: src/instruction_set.c.o
 
 # target to build an object file
 src/instruction_set.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/src/instruction_set.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/instruction_set.c.o
 .PHONY : src/instruction_set.c.o
 
 src/instruction_set.i: src/instruction_set.c.i
@@ -176,7 +226,7 @@ src/instruction_set.i: src/instruction_set.c.i
 
 # target to preprocess a source file
 src/instruction_set.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/src/instruction_set.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/instruction_set.c.i
 .PHONY : src/instruction_set.c.i
 
 src/instruction_set.s: src/instruction_set.c.s
@@ -184,7 +234,7 @@ src/instruction_set.s: src/instruction_set.c.s
 
 # target to generate assembly for a file
 src/instruction_set.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/src/instruction_set.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/instruction_set.c.s
 .PHONY : src/instruction_set.c.s
 
 src/memory.o: src/memory.c.o
@@ -192,7 +242,7 @@ src/memory.o: src/memory.c.o
 
 # target to build an object file
 src/memory.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/src/memory.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/memory.c.o
 .PHONY : src/memory.c.o
 
 src/memory.i: src/memory.c.i
@@ -200,7 +250,7 @@ src/memory.i: src/memory.c.i
 
 # target to preprocess a source file
 src/memory.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/src/memory.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/memory.c.i
 .PHONY : src/memory.c.i
 
 src/memory.s: src/memory.c.s
@@ -208,56 +258,32 @@ src/memory.s: src/memory.c.s
 
 # target to generate assembly for a file
 src/memory.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/src/memory.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/memory.c.s
 .PHONY : src/memory.c.s
 
-tests/test_lda.o: tests/test_lda.cpp.o
-.PHONY : tests/test_lda.o
+tests/test_cpu.o: tests/test_cpu.cpp.o
+.PHONY : tests/test_cpu.o
 
 # target to build an object file
-tests/test_lda.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o
-.PHONY : tests/test_lda.cpp.o
+tests/test_cpu.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o
+.PHONY : tests/test_cpu.cpp.o
 
-tests/test_lda.i: tests/test_lda.cpp.i
-.PHONY : tests/test_lda.i
-
-# target to preprocess a source file
-tests/test_lda.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.i
-.PHONY : tests/test_lda.cpp.i
-
-tests/test_lda.s: tests/test_lda.cpp.s
-.PHONY : tests/test_lda.s
-
-# target to generate assembly for a file
-tests/test_lda.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.s
-.PHONY : tests/test_lda.cpp.s
-
-tests/test_ldx.o: tests/test_ldx.cpp.o
-.PHONY : tests/test_ldx.o
-
-# target to build an object file
-tests/test_ldx.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o
-.PHONY : tests/test_ldx.cpp.o
-
-tests/test_ldx.i: tests/test_ldx.cpp.i
-.PHONY : tests/test_ldx.i
+tests/test_cpu.i: tests/test_cpu.cpp.i
+.PHONY : tests/test_cpu.i
 
 # target to preprocess a source file
-tests/test_ldx.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.i
-.PHONY : tests/test_ldx.cpp.i
+tests/test_cpu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.i
+.PHONY : tests/test_cpu.cpp.i
 
-tests/test_ldx.s: tests/test_ldx.cpp.s
-.PHONY : tests/test_ldx.s
+tests/test_cpu.s: tests/test_cpu.cpp.s
+.PHONY : tests/test_cpu.s
 
 # target to generate assembly for a file
-tests/test_ldx.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.s
-.PHONY : tests/test_ldx.cpp.s
+tests/test_cpu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.s
+.PHONY : tests/test_cpu.cpp.s
 
 tests/test_main.o: tests/test_main.cpp.o
 .PHONY : tests/test_main.o
@@ -283,30 +309,6 @@ tests/test_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_main.cpp.s
 .PHONY : tests/test_main.cpp.s
 
-tests/test_transfer.o: tests/test_transfer.cpp.o
-.PHONY : tests/test_transfer.o
-
-# target to build an object file
-tests/test_transfer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o
-.PHONY : tests/test_transfer.cpp.o
-
-tests/test_transfer.i: tests/test_transfer.cpp.i
-.PHONY : tests/test_transfer.i
-
-# target to preprocess a source file
-tests/test_transfer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.i
-.PHONY : tests/test_transfer.cpp.i
-
-tests/test_transfer.s: tests/test_transfer.cpp.s
-.PHONY : tests/test_transfer.s
-
-# target to generate assembly for a file
-tests/test_transfer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.s
-.PHONY : tests/test_transfer.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -316,7 +318,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... emulator"
+	@echo "... emulator_core"
 	@echo "... emulator_tests"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... src/cpu.o"
 	@echo "... src/cpu.i"
 	@echo "... src/cpu.s"
@@ -326,18 +333,12 @@ help:
 	@echo "... src/memory.o"
 	@echo "... src/memory.i"
 	@echo "... src/memory.s"
-	@echo "... tests/test_lda.o"
-	@echo "... tests/test_lda.i"
-	@echo "... tests/test_lda.s"
-	@echo "... tests/test_ldx.o"
-	@echo "... tests/test_ldx.i"
-	@echo "... tests/test_ldx.s"
+	@echo "... tests/test_cpu.o"
+	@echo "... tests/test_cpu.i"
+	@echo "... tests/test_cpu.s"
 	@echo "... tests/test_main.o"
 	@echo "... tests/test_main.i"
 	@echo "... tests/test_main.s"
-	@echo "... tests/test_transfer.o"
-	@echo "... tests/test_transfer.i"
-	@echo "... tests/test_transfer.s"
 .PHONY : help
 
 

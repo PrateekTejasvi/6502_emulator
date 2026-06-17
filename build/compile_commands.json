@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/prateektejasvi/programs/6502/build",
+  "command": "/usr/bin/cc  -I/Users/prateektejasvi/programs/6502/include -std=gnu11 -arch arm64 -o CMakeFiles/emulator_core.dir/src/cpu.c.o -c /Users/prateektejasvi/programs/6502/src/cpu.c",
+  "file": "/Users/prateektejasvi/programs/6502/src/cpu.c",
+  "output": "CMakeFiles/emulator_core.dir/src/cpu.c.o"
+},
+{
+  "directory": "/Users/prateektejasvi/programs/6502/build",
+  "command": "/usr/bin/cc  -I/Users/prateektejasvi/programs/6502/include -std=gnu11 -arch arm64 -o CMakeFiles/emulator_core.dir/src/memory.c.o -c /Users/prateektejasvi/programs/6502/src/memory.c",
+  "file": "/Users/prateektejasvi/programs/6502/src/memory.c",
+  "output": "CMakeFiles/emulator_core.dir/src/memory.c.o"
+},
+{
+  "directory": "/Users/prateektejasvi/programs/6502/build",
+  "command": "/usr/bin/cc  -I/Users/prateektejasvi/programs/6502/include -std=gnu11 -arch arm64 -o CMakeFiles/emulator_core.dir/src/instruction_set.c.o -c /Users/prateektejasvi/programs/6502/src/instruction_set.c",
+  "file": "/Users/prateektejasvi/programs/6502/src/instruction_set.c",
+  "output": "CMakeFiles/emulator_core.dir/src/instruction_set.c.o"
+},
+{
+  "directory": "/Users/prateektejasvi/programs/6502/build",
+  "command": "/usr/bin/cc  -I/Users/prateektejasvi/programs/6502/include -std=gnu11 -arch arm64 -o CMakeFiles/emulator.dir/main.c.o -c /Users/prateektejasvi/programs/6502/main.c",
+  "file": "/Users/prateektejasvi/programs/6502/main.c",
+  "output": "CMakeFiles/emulator.dir/main.c.o"
+},
+{
+  "directory": "/Users/prateektejasvi/programs/6502/build",
+  "command": "/usr/bin/c++  -I/Users/prateektejasvi/programs/6502/include -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_main.cpp",
+  "file": "/Users/prateektejasvi/programs/6502/tests/test_main.cpp",
+  "output": "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o"
+},
+{
+  "directory": "/Users/prateektejasvi/programs/6502/build",
+  "command": "/usr/bin/c++  -I/Users/prateektejasvi/programs/6502/include -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_cpu.cpp",
+  "file": "/Users/prateektejasvi/programs/6502/tests/test_cpu.cpp",
+  "output": "CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o"
+}
+]

@@ -63,10 +63,14 @@ CMAKE_BINARY_DIR = /Users/prateektejasvi/programs/6502/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/emulator_core.dir/all
+all: CMakeFiles/emulator.dir/all
 all: CMakeFiles/emulator_tests.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
+codegen: CMakeFiles/emulator_core.dir/codegen
+codegen: CMakeFiles/emulator.dir/codegen
 codegen: CMakeFiles/emulator_tests.dir/codegen
 .PHONY : codegen
 
@@ -75,22 +79,88 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/emulator_core.dir/clean
+clean: CMakeFiles/emulator.dir/clean
 clean: CMakeFiles/emulator_tests.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/emulator_core.dir
+
+# All Build rule for target.
+CMakeFiles/emulator_core.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=3,4,5,6 "Built target emulator_core"
+.PHONY : CMakeFiles/emulator_core.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/emulator_core.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/prateektejasvi/programs/6502/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/emulator_core.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/prateektejasvi/programs/6502/build/CMakeFiles 0
+.PHONY : CMakeFiles/emulator_core.dir/rule
+
+# Convenience name for target.
+emulator_core: CMakeFiles/emulator_core.dir/rule
+.PHONY : emulator_core
+
+# codegen rule for target.
+CMakeFiles/emulator_core.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=3,4,5,6 "Finished codegen for target emulator_core"
+.PHONY : CMakeFiles/emulator_core.dir/codegen
+
+# clean rule for target.
+CMakeFiles/emulator_core.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/clean
+.PHONY : CMakeFiles/emulator_core.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/emulator.dir
+
+# All Build rule for target.
+CMakeFiles/emulator.dir/all: CMakeFiles/emulator_core.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator.dir/build.make CMakeFiles/emulator.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator.dir/build.make CMakeFiles/emulator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=1,2 "Built target emulator"
+.PHONY : CMakeFiles/emulator.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/emulator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/prateektejasvi/programs/6502/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/emulator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/prateektejasvi/programs/6502/build/CMakeFiles 0
+.PHONY : CMakeFiles/emulator.dir/rule
+
+# Convenience name for target.
+emulator: CMakeFiles/emulator.dir/rule
+.PHONY : emulator
+
+# codegen rule for target.
+CMakeFiles/emulator.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator.dir/build.make CMakeFiles/emulator.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=1,2 "Finished codegen for target emulator"
+.PHONY : CMakeFiles/emulator.dir/codegen
+
+# clean rule for target.
+CMakeFiles/emulator.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator.dir/build.make CMakeFiles/emulator.dir/clean
+.PHONY : CMakeFiles/emulator.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/emulator_tests.dir
 
 # All Build rule for target.
-CMakeFiles/emulator_tests.dir/all:
+CMakeFiles/emulator_tests.dir/all: CMakeFiles/emulator_core.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target emulator_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=7,8,9 "Built target emulator_tests"
 .PHONY : CMakeFiles/emulator_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/emulator_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/prateektejasvi/programs/6502/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/prateektejasvi/programs/6502/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/emulator_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/prateektejasvi/programs/6502/build/CMakeFiles 0
 .PHONY : CMakeFiles/emulator_tests.dir/rule
@@ -102,7 +172,7 @@ emulator_tests: CMakeFiles/emulator_tests.dir/rule
 # codegen rule for target.
 CMakeFiles/emulator_tests.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target emulator_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=7,8,9 "Finished codegen for target emulator_tests"
 .PHONY : CMakeFiles/emulator_tests.dir/codegen
 
 # clean rule for target.

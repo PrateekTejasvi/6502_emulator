@@ -86,116 +86,37 @@ CMakeFiles/emulator_tests.dir/tests/test_main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/emulator_tests.dir/tests/test_main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prateektejasvi/programs/6502/tests/test_main.cpp -o CMakeFiles/emulator_tests.dir/tests/test_main.cpp.s
 
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o: CMakeFiles/emulator_tests.dir/flags.make
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o: /Users/prateektejasvi/programs/6502/tests/test_lda.cpp
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o -MF CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o.d -o CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_lda.cpp
+CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o: CMakeFiles/emulator_tests.dir/flags.make
+CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o: /Users/prateektejasvi/programs/6502/tests/test_cpu.cpp
+CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o -MF CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o.d -o CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_cpu.cpp
 
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prateektejasvi/programs/6502/tests/test_lda.cpp > CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.i
+CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prateektejasvi/programs/6502/tests/test_cpu.cpp > CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.i
 
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prateektejasvi/programs/6502/tests/test_lda.cpp -o CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.s
-
-CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o: CMakeFiles/emulator_tests.dir/flags.make
-CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o: /Users/prateektejasvi/programs/6502/tests/test_ldx.cpp
-CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o -MF CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o.d -o CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_ldx.cpp
-
-CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prateektejasvi/programs/6502/tests/test_ldx.cpp > CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.i
-
-CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prateektejasvi/programs/6502/tests/test_ldx.cpp -o CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.s
-
-CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o: CMakeFiles/emulator_tests.dir/flags.make
-CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o: /Users/prateektejasvi/programs/6502/tests/test_transfer.cpp
-CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o -MF CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o.d -o CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_transfer.cpp
-
-CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prateektejasvi/programs/6502/tests/test_transfer.cpp > CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.i
-
-CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prateektejasvi/programs/6502/tests/test_transfer.cpp -o CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.s
-
-CMakeFiles/emulator_tests.dir/src/cpu.c.o: CMakeFiles/emulator_tests.dir/flags.make
-CMakeFiles/emulator_tests.dir/src/cpu.c.o: /Users/prateektejasvi/programs/6502/src/cpu.c
-CMakeFiles/emulator_tests.dir/src/cpu.c.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/emulator_tests.dir/src/cpu.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/src/cpu.c.o -MF CMakeFiles/emulator_tests.dir/src/cpu.c.o.d -o CMakeFiles/emulator_tests.dir/src/cpu.c.o -c /Users/prateektejasvi/programs/6502/src/cpu.c
-
-CMakeFiles/emulator_tests.dir/src/cpu.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/emulator_tests.dir/src/cpu.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/prateektejasvi/programs/6502/src/cpu.c > CMakeFiles/emulator_tests.dir/src/cpu.c.i
-
-CMakeFiles/emulator_tests.dir/src/cpu.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emulator_tests.dir/src/cpu.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/prateektejasvi/programs/6502/src/cpu.c -o CMakeFiles/emulator_tests.dir/src/cpu.c.s
-
-CMakeFiles/emulator_tests.dir/src/memory.c.o: CMakeFiles/emulator_tests.dir/flags.make
-CMakeFiles/emulator_tests.dir/src/memory.c.o: /Users/prateektejasvi/programs/6502/src/memory.c
-CMakeFiles/emulator_tests.dir/src/memory.c.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/emulator_tests.dir/src/memory.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/src/memory.c.o -MF CMakeFiles/emulator_tests.dir/src/memory.c.o.d -o CMakeFiles/emulator_tests.dir/src/memory.c.o -c /Users/prateektejasvi/programs/6502/src/memory.c
-
-CMakeFiles/emulator_tests.dir/src/memory.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/emulator_tests.dir/src/memory.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/prateektejasvi/programs/6502/src/memory.c > CMakeFiles/emulator_tests.dir/src/memory.c.i
-
-CMakeFiles/emulator_tests.dir/src/memory.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emulator_tests.dir/src/memory.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/prateektejasvi/programs/6502/src/memory.c -o CMakeFiles/emulator_tests.dir/src/memory.c.s
-
-CMakeFiles/emulator_tests.dir/src/instruction_set.c.o: CMakeFiles/emulator_tests.dir/flags.make
-CMakeFiles/emulator_tests.dir/src/instruction_set.c.o: /Users/prateektejasvi/programs/6502/src/instruction_set.c
-CMakeFiles/emulator_tests.dir/src/instruction_set.c.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/emulator_tests.dir/src/instruction_set.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/src/instruction_set.c.o -MF CMakeFiles/emulator_tests.dir/src/instruction_set.c.o.d -o CMakeFiles/emulator_tests.dir/src/instruction_set.c.o -c /Users/prateektejasvi/programs/6502/src/instruction_set.c
-
-CMakeFiles/emulator_tests.dir/src/instruction_set.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/emulator_tests.dir/src/instruction_set.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/prateektejasvi/programs/6502/src/instruction_set.c > CMakeFiles/emulator_tests.dir/src/instruction_set.c.i
-
-CMakeFiles/emulator_tests.dir/src/instruction_set.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emulator_tests.dir/src/instruction_set.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/prateektejasvi/programs/6502/src/instruction_set.c -o CMakeFiles/emulator_tests.dir/src/instruction_set.c.s
+CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prateektejasvi/programs/6502/tests/test_cpu.cpp -o CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.s
 
 # Object files for target emulator_tests
 emulator_tests_OBJECTS = \
 "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o" \
-"CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o" \
-"CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o" \
-"CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o" \
-"CMakeFiles/emulator_tests.dir/src/cpu.c.o" \
-"CMakeFiles/emulator_tests.dir/src/memory.c.o" \
-"CMakeFiles/emulator_tests.dir/src/instruction_set.c.o"
+"CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o"
 
 # External object files for target emulator_tests
 emulator_tests_EXTERNAL_OBJECTS =
 
 emulator_tests: CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o
-emulator_tests: CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o
-emulator_tests: CMakeFiles/emulator_tests.dir/tests/test_ldx.cpp.o
-emulator_tests: CMakeFiles/emulator_tests.dir/tests/test_transfer.cpp.o
-emulator_tests: CMakeFiles/emulator_tests.dir/src/cpu.c.o
-emulator_tests: CMakeFiles/emulator_tests.dir/src/memory.c.o
-emulator_tests: CMakeFiles/emulator_tests.dir/src/instruction_set.c.o
+emulator_tests: CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o
 emulator_tests: CMakeFiles/emulator_tests.dir/build.make
+emulator_tests: libemulator_core.a
 emulator_tests: /opt/homebrew/lib/libgtest.a
 emulator_tests: /opt/homebrew/lib/libgtest_main.a
 emulator_tests: /opt/homebrew/lib/libgtest.a
 emulator_tests: CMakeFiles/emulator_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable emulator_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable emulator_tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/emulator_tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -8,8 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/prateektejasvi/programs/6502/tests/test_cpu.cpp" "CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o" "gcc" "CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o.d"
-  "/Users/prateektejasvi/programs/6502/tests/test_main.cpp" "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o" "gcc" "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o.d"
+  "/Users/prateektejasvi/programs/6502/src/cpu.c" "CMakeFiles/emulator_core.dir/src/cpu.c.o" "gcc" "CMakeFiles/emulator_core.dir/src/cpu.c.o.d"
+  "/Users/prateektejasvi/programs/6502/src/instruction_set.c" "CMakeFiles/emulator_core.dir/src/instruction_set.c.o" "gcc" "CMakeFiles/emulator_core.dir/src/instruction_set.c.o.d"
+  "/Users/prateektejasvi/programs/6502/src/memory.c" "CMakeFiles/emulator_core.dir/src/memory.c.o" "gcc" "CMakeFiles/emulator_core.dir/src/memory.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

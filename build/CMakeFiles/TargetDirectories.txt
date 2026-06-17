@@ -1,3 +1,5 @@
+/Users/prateektejasvi/programs/6502/build/CMakeFiles/emulator_core.dir
+/Users/prateektejasvi/programs/6502/build/CMakeFiles/emulator.dir
 /Users/prateektejasvi/programs/6502/build/CMakeFiles/emulator_tests.dir
 /Users/prateektejasvi/programs/6502/build/CMakeFiles/test.dir
 /Users/prateektejasvi/programs/6502/build/CMakeFiles/edit_cache.dir
