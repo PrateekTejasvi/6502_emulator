@@ -31,8 +31,8 @@
 },
 {
   "directory": "/Users/prateektejasvi/programs/6502/build",
-  "command": "/usr/bin/c++  -I/Users/prateektejasvi/programs/6502/include -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_cpu.cpp",
-  "file": "/Users/prateektejasvi/programs/6502/tests/test_cpu.cpp",
-  "output": "CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o"
+  "command": "/usr/bin/c++  -I/Users/prateektejasvi/programs/6502/include -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_lda.cpp",
+  "file": "/Users/prateektejasvi/programs/6502/tests/test_lda.cpp",
+  "output": "CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o"
 }
 ]

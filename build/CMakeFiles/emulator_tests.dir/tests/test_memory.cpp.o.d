@@ -1,5 +1,5 @@
-CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o: \
-  /Users/prateektejasvi/programs/6502/tests/test_cpu.cpp \
+CMakeFiles/emulator_tests.dir/tests/test_memory.cpp.o: \
+  /Users/prateektejasvi/programs/6502/tests/test_memory.cpp \
   /Users/prateektejasvi/programs/6502/tests/test_fixture.h \
   /opt/homebrew/include/gtest/gtest.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstddef \

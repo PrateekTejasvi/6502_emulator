@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/prateektejasvi/programs/6502/tests/test_cpu.cpp" "CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o" "gcc" "CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o.d"
+  "/Users/prateektejasvi/programs/6502/tests/test_lda.cpp" "CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o" "gcc" "CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o.d"
   "/Users/prateektejasvi/programs/6502/tests/test_main.cpp" "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o" "gcc" "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o.d"
   )
 

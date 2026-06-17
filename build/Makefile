@@ -261,29 +261,29 @@ src/memory.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/memory.c.s
 .PHONY : src/memory.c.s
 
-tests/test_cpu.o: tests/test_cpu.cpp.o
-.PHONY : tests/test_cpu.o
+tests/test_lda.o: tests/test_lda.cpp.o
+.PHONY : tests/test_lda.o
 
 # target to build an object file
-tests/test_cpu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.o
-.PHONY : tests/test_cpu.cpp.o
+tests/test_lda.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o
+.PHONY : tests/test_lda.cpp.o
 
-tests/test_cpu.i: tests/test_cpu.cpp.i
-.PHONY : tests/test_cpu.i
+tests/test_lda.i: tests/test_lda.cpp.i
+.PHONY : tests/test_lda.i
 
 # target to preprocess a source file
-tests/test_cpu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.i
-.PHONY : tests/test_cpu.cpp.i
+tests/test_lda.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.i
+.PHONY : tests/test_lda.cpp.i
 
-tests/test_cpu.s: tests/test_cpu.cpp.s
-.PHONY : tests/test_cpu.s
+tests/test_lda.s: tests/test_lda.cpp.s
+.PHONY : tests/test_lda.s
 
 # target to generate assembly for a file
-tests/test_cpu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_cpu.cpp.s
-.PHONY : tests/test_cpu.cpp.s
+tests/test_lda.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.s
+.PHONY : tests/test_lda.cpp.s
 
 tests/test_main.o: tests/test_main.cpp.o
 .PHONY : tests/test_main.o
@@ -333,9 +333,9 @@ help:
 	@echo "... src/memory.o"
 	@echo "... src/memory.i"
 	@echo "... src/memory.s"
-	@echo "... tests/test_cpu.o"
-	@echo "... tests/test_cpu.i"
-	@echo "... tests/test_cpu.s"
+	@echo "... tests/test_lda.o"
+	@echo "... tests/test_lda.i"
+	@echo "... tests/test_lda.s"
 	@echo "... tests/test_main.o"
 	@echo "... tests/test_main.i"
 	@echo "... tests/test_main.s"
