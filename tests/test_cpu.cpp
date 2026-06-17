@@ -1,28 +1,4 @@
-#include <gtest/gtest.h>
-
-extern "C" {
-#include "cpu.h"
-#include "memory.h"
-#include "instruction_set.h"
-}
-
-class CPUFixture : public ::testing::Test
-{
-protected:
-    CPU cpu;
-    Mem mem;
-
-    void SetUp() override
-    {
-        Init(&mem);
-
-        mem.Data[0xFFFC] = 0x00;
-        mem.Data[0xFFFD] = 0x80;
-
-        Reset(&cpu,&mem);
-    }
-};
-
+#include"test_fixture.h"
 //test for reset vector -> program counter
 TEST_F(CPUFixture,ResetLoadsProgramCounterFromResetVector){
     EXPECT_EQ(cpu.PC,0x8000);
@@ -37,7 +13,7 @@ TEST_F(CPUFixture,ResetStatusRegisters){
     EXPECT_EQ(cpu.X,0x00);
     EXPECT_EQ(cpu.Y,0x00);
 }
-
+//tests for PC pointing to this address: mem->Data[0xFFFC] | mem->Data[0xFFFD] << 8
 TEST_F(CPUFixture,ResetVector){
     CPU cpu;
     Mem mem;
@@ -54,4 +30,18 @@ TEST_F(CPUFixture,FetchByteReturnsValue){
     mem.Data[0x8000] = 0x42;
     Byte data = FetchByte(&cpu, &mem, ticks);
     EXPECT_EQ(data,0x42);
+}
+
+TEST_F(CPUFixture,FetchByteConsumesClockCycle){
+    unsigned int ticks = 2;
+    mem.Data[0x8000] = 0x42;
+    Byte data = FetchByte(&cpu,&mem,&ticks);
+    EXPECT_EQ(ticks,1);
+}
+
+TEST_F(CPUFixture,FetchByteIncrementPC){
+    unsigned int ticks = 2;
+    mem.Data[0x8000] = 0x42;
+    Byte data = FetchByte(&cpu,&mem,&ticks);
+    EXPECT_EQ(cpu.PC,0x8001);
 }

@@ -53,8 +53,9 @@ find_package(GTest REQUIRED)
 add_executable(
     emulator_tests
     tests/test_main.cpp
-    tests/test_cpu.cpp
-    #tests/test_lda.cpp
+    #tests/test_cpu.cpp
+    #tests/test_memory.cpp
+    tests/test_lda.cpp
     #tests/test_ldx.cpp
     #tests/test_transfer.cpp
 )
