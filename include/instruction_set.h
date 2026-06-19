@@ -49,12 +49,11 @@
 //LDA INSTRUCTINS
 
 //merge LDA instructions
-void Execute_INS_LDA(CPU*,Mem*,unsigned int*,Byte);
-
+void Execute_INS_LDA(CPU*,Byte);
 //LDX INSTRUCTIONS
-void Execute_INS_LDX(CPU*,Mem*,unsigned int*,Byte);
+void Execute_INS_LDX(CPU*,Byte);
 //LDY INSTRUCTIONS
-void Execute_INS_LDY(CPU*,Mem*,unsigned int*,Byte);
+void Execute_INS_LDY(CPU*,Byte);
 //STA INSTRUCTIONS
 void Execute_INS_STA(CPU*,Mem *,unsigned int*,Word);
 //STX INSTRUCTIONS

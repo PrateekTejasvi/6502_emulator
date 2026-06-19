@@ -61,14 +61,14 @@ static void INS_TXS(CPU *cpu){
     //does not update flags
 }
 
-void Execute_INS_LDA(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value){
+void Execute_INS_LDA(CPU *cpu,Byte value){
     INS_LDA(cpu,value);
 }
 
-void Execute_INS_LDX(CPU *cpu,Mem *mem,unsigned int *ticks,Byte value){
+void Execute_INS_LDX(CPU *cpu,Byte value){
     INS_LDX(cpu,value);
 }
-void Execute_INS_LDY(CPU *cpu, Mem *mem, unsigned int *ticks, Byte value){
+void Execute_INS_LDY(CPU *cpu, Byte value){
     INS_LDY(cpu,value);
 }
 void Execute_INS_STA(CPU *cpu,Mem *mem,unsigned int *ticks,Word address){

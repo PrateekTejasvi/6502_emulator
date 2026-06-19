@@ -23,7 +23,7 @@ TEST_F(CPUFixture,LoadAccumalatorImmediate){
     mem.Data[0x8001] = 0x42;
     Byte Ins = FetchByte(&cpu,&mem,&ticks);
     Byte value = addr_immediate(&cpu,&mem,&ticks);
-    Execute_INS_LDA(&cpu,&mem,&ticks,value);
+    Execute_INS_LDA(&cpu,value);
     EXPECT_EQ(cpu.A,0x42);
 }
 TEST_F(CPUFixture,LoadAccumalatorImmediateStatus){
@@ -32,7 +32,7 @@ TEST_F(CPUFixture,LoadAccumalatorImmediateStatus){
     mem.Data[0x8001] = 0x42;
     Byte Ins = FetchByte(&cpu,&mem,&ticks);
     Byte value = addr_immediate(&cpu,&mem,&ticks);
-    Execute_INS_LDA(&cpu, &mem, &ticks, value);
+    Execute_INS_LDA(&cpu, value);
     EXPECT_FALSE(cpu.Status & FLAG_Z);
     EXPECT_FALSE(cpu.Status & FLAG_N);
 }

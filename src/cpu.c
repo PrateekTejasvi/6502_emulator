@@ -3,8 +3,6 @@
 #include "memory.h"
 #include <complex.h>
 #include <stdint.h>
-//TODO:major change to tackle is to ensure that ADDRESS calculation also takes a tick or clock cycle
-//right now it just assumes only instructions take a clock cycle
 
 void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
 
@@ -14,93 +12,93 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
         switch(Ins){
             case INS_LDA_IM:{
                 Byte value = addr_immediate(cpu,mem, &ticks);
-                Execute_INS_LDA(cpu,mem,&ticks,value);
+                Execute_INS_LDA(cpu,value);
                 break;
             }
             case INS_LDA_ZP:{
                     Byte value  = addr_zero_page(cpu, mem,&ticks);
-                    Execute_INS_LDA(cpu, mem, &ticks, value);
+                    Execute_INS_LDA(cpu,value);
                     break;
             }
             case INS_LDA_ABS:{
                     Byte value = addr_absolute(cpu, mem, &ticks);
-                    Execute_INS_LDA(cpu,mem,&ticks,value);
+                    Execute_INS_LDA(cpu,value);
                 break;
             }
 
             case INS_LDA_ZP_X:{
                 Byte value = addr_zero_page_x(cpu, mem, &ticks);
-                Execute_INS_LDA(cpu,mem,&ticks,value);
+                Execute_INS_LDA(cpu,value);
                 break;
             }
 //TODO:LDA_ABS_X/Y can take an extra clock cylce 4+1 depending on the wrapping
             case INS_LDA_ABS_X:{
                 Byte value = addr_absolute_x(cpu, mem, &ticks);
-                Execute_INS_LDA(cpu,mem,&ticks,value);
+                Execute_INS_LDA(cpu,value);
                 break;
             }
 
             case INS_LDA_ABS_Y:{
                 Byte value = addr_absolute_y(cpu,mem,&ticks);
-                Execute_INS_LDA(cpu,mem,&ticks,value);
+                Execute_INS_LDA(cpu,value);
                 break;
             }
 //INSTRUCTION SET FOR LDX
 
             case INS_LDX_IM:{
                 Byte value = addr_immediate(cpu,mem,&ticks);
-                Execute_INS_LDX(cpu,mem,&ticks,value);
+                Execute_INS_LDX(cpu,value);
                 break;
             }
 
             case INS_LDX_ZP:{
                 Byte ZP_Value = addr_zero_page(cpu,mem,&ticks);
-                Execute_INS_LDX(cpu,mem,&ticks,ZP_Value);
+                Execute_INS_LDX(cpu,ZP_Value);
                 break;
             }
             case INS_LDX_ABS:{
                  Byte Value = addr_absolute(cpu, mem, &ticks);
-                 Execute_INS_LDX(cpu,mem,&ticks,Value);
+                 Execute_INS_LDX(cpu,Value);
                  break;
             }
 
             case INS_LDX_ZP_Y:{
                 Byte value = addr_zero_page_y(cpu, mem, &ticks);
-                Execute_INS_LDX(cpu,mem,&ticks,value);
+                Execute_INS_LDX(cpu,value);
                 break;
             }
 
             case INS_LDX_ABS_Y:{
                 Byte value = addr_absolute_y(cpu, mem, &ticks);
-                Execute_INS_LDX(cpu,mem,&ticks,value);
+                Execute_INS_LDX(cpu,value);
                 break;
             }
 
 //INSTRUCTION SET FOR LDY
             case INS_LDY_IM:{
                 Byte Value = addr_immediate(cpu, mem, &ticks);
-                Execute_INS_LDY(cpu,mem,&ticks,Value);
+                Execute_INS_LDY(cpu,Value);
                 break;
             }
             case INS_LDY_ZP:{
                 Byte ZP_Value = addr_zero_page(cpu,mem,&ticks);
-                Execute_INS_LDY(cpu,mem,&ticks,ZP_Value);
+                Execute_INS_LDY(cpu,ZP_Value);
                 break;
             }
             case INS_LDY_ZP_X:{
                 Byte value = addr_zero_page_x(cpu, mem, &ticks);
-                Execute_INS_LDY(cpu,mem,&ticks,value);
+                Execute_INS_LDY(cpu,value);
                 break;
             }
 
             case INS_LDY_ABS:{
                  Byte Value = addr_absolute(cpu, mem, &ticks);
-                 Execute_INS_LDY(cpu,mem,&ticks,Value);
+                 Execute_INS_LDY(cpu,Value);
                 break;
             }
             case INS_LDY_ABS_X:{
                 Byte value = addr_absolute_x(cpu, mem, &ticks);
-                Execute_INS_LDY(cpu,mem,&ticks,value);
+                Execute_INS_LDY(cpu,value);
                 break;
             }
 //INSTRUCTION SET FOR STA
@@ -224,4 +222,63 @@ void Reset(CPU *cpu, Mem *mem){
     SetFlag(cpu,FLAG_Z,0);
     SetFlag(cpu,FLAG_V,0);
     SetFlag(cpu,FLAG_U,0);
+}
+Instruction InstructionTable[256];
+void InitInstructionTable(void){
+    InstructionTable[INS_LDA_IM] = (
+        Instruction
+    )
+    {
+       .Mnemonic="LDA",
+       .Operation =LDA,
+       .AddressMode =Immediate,
+       .ticks = 2,
+       .PageCrossPenalty = 0
+    };
+    InstructionTable[INS_LDA_ZP] = (
+       Instruction
+        ){
+            .Mnemonic = "LDA",
+            .Operation = LDA,
+            .AddressMode = ZeroPage,
+            .ticks = 3,
+            .PageCrossPenalty=0
+        };
+    InstructionTable[INS_LDA_ZP_X] = (
+        Instruction
+    ){
+        .Mnemonic = "LDA",
+        .Operation=LDA,
+        .AddressMode = ZeroPage_X,
+        .ticks = 3,
+        .PageCrossPenalty=0
+    };
+    InstructionTable[INS_LDA_ABS] = (
+        Instruction
+    ){
+        .Mnemonic = "LDA",
+        .Operation=LDA,
+        .AddressMode=Absolute,
+        .ticks=4,
+        .PageCrossPenalty =0
+
+    };
+    InstructionTable[INS_LDA_ABS_X]=(
+        Instruction
+    ){
+        .Mnemonic="LDA",
+        .Operation=LDA,
+        .AddressMode=Absolute_X,
+        .ticks=4,
+        .PageCrossPenalty = 1
+    };
+    InstructionTable[INS_LDA_ABS_Y]=(
+        Instruction
+    ){
+        .Mnemonic="LDA",
+        .Operation=LDA,
+        .AddressMode=Absolute_Y,
+        .ticks=4,
+        .PageCrossPenalty = 1
+    };
 }
