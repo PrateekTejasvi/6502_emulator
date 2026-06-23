@@ -672,6 +672,7 @@ CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o: /Users/prateektejasvi/progra
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/span \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stack \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stddef.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdexcept \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdint.h \
@@ -857,6 +858,7 @@ CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o: /Users/prateektejasvi/progra
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/limits.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/ptrcheck.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdarg.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdint.h \
   /Users/prateektejasvi/programs/6502/include/cpu.h \
@@ -1802,6 +1804,8 @@ CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o: /Users/prateektejasvi/progr
 
 /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stddef.h:
 
+/Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h:
+
 /Library/Developer/CommandLineTools/usr/lib/clang/21/include/limits.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/21/include/float.h:
@@ -2637,6 +2641,8 @@ CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o: /Users/prateektejasvi/progr
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wchar.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/exponential_functions.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h:
 

@@ -46,7 +46,15 @@
 #define INS_TXS_IMP 0x9A
 //TYA INSTRUCTION
 #define INS_TYA_IMP 0x98
-//LDA INSTRUCTINS
+//ADC- add with carry instructions
+#define INS_ADC_IM 0x69
+#define INS_ADC_ZP 0x65
+#define INS_ADC_ZP_X 0x75
+#define INS_ADC_ABS 0x6D
+#define INS_ADC_ABS_X 0x7D
+#define INS_ADC_ABS_Y 0x79
+#define INS_ADC_IND_X 0x61
+#define INS_ADC_IND_Y 0x71
 
 //merge LDA instructions
 void Execute_INS_LDA(CPU*,Byte);
@@ -67,3 +75,4 @@ void Execute_INS_TSX(CPU*);
 void Execute_INS_TXA(CPU*);
 void Execute_INS_TXS(CPU*);
 void Execute_INS_TYA(CPU*);
+//ADC INSTRUCTIONS

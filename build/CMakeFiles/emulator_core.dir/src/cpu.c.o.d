@@ -2,6 +2,7 @@ CMakeFiles/emulator_core.dir/src/cpu.c.o: \
   /Users/prateektejasvi/programs/6502/src/cpu.c \
   /Users/prateektejasvi/programs/6502/include/cpu.h \
   /Users/prateektejasvi/programs/6502/include/memory.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h \
   /Users/prateektejasvi/programs/6502/include/instruction_set.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/complex.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \

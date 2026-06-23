@@ -24,17 +24,20 @@ CMakeFiles/emulator_core.dir/src/cpu.c.o: /Users/prateektejasvi/programs/6502/sr
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/ptrcheck.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdint.h \
   /Users/prateektejasvi/programs/6502/include/cpu.h \
   /Users/prateektejasvi/programs/6502/include/instruction_set.h \
   /Users/prateektejasvi/programs/6502/include/memory.h
 
 CMakeFiles/emulator_core.dir/src/instruction_set.c.o: /Users/prateektejasvi/programs/6502/src/instruction_set.c \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h \
   /Users/prateektejasvi/programs/6502/include/cpu.h \
   /Users/prateektejasvi/programs/6502/include/instruction_set.h \
   /Users/prateektejasvi/programs/6502/include/memory.h
 
 CMakeFiles/emulator_core.dir/src/memory.c.o: /Users/prateektejasvi/programs/6502/src/memory.c \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h \
   /Users/prateektejasvi/programs/6502/include/cpu.h \
   /Users/prateektejasvi/programs/6502/include/memory.h
 
@@ -46,6 +49,8 @@ CMakeFiles/emulator_core.dir/src/memory.c.o: /Users/prateektejasvi/programs/6502
 /Users/prateektejasvi/programs/6502/include/memory.h:
 
 /Users/prateektejasvi/programs/6502/include/cpu.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h:
 

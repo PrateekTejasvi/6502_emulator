@@ -881,4 +881,6 @@ CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o: \
   /opt/homebrew/include/gtest/gtest_prod.h \
   /Users/prateektejasvi/programs/6502/include/cpu.h \
   /Users/prateektejasvi/programs/6502/include/memory.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h \
   /Users/prateektejasvi/programs/6502/include/instruction_set.h

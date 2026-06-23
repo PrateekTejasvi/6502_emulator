@@ -86,6 +86,7 @@ CMakeFiles/emulator.dir/main.c.o: /Users/prateektejasvi/programs/6502/main.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/ptrcheck.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdint.h \
   /Users/prateektejasvi/programs/6502/include/cpu.h \
   /Users/prateektejasvi/programs/6502/include/instruction_set.h \
@@ -107,6 +108,8 @@ CMakeFiles/emulator.dir/main.c.o: /Users/prateektejasvi/programs/6502/main.c \
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_wchar_t.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_uintptr_t.h:
 

@@ -673,6 +673,7 @@ CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o
  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/span
  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream
  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stack
+ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stddef.h
  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdexcept
  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdint.h
@@ -858,6 +859,7 @@ CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o
  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/limits.h
  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/ptrcheck.h
  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdarg.h
+ /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h
  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stddef.h
  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdint.h
  /Users/prateektejasvi/programs/6502/include/cpu.h

@@ -1,6 +1,6 @@
 #include "cpu.h"
 #include "memory.h"
-
+//TODO:add page boundary crossing
 void Init(Mem *mem){
 
     mem->MAX_MEM = 1024 * 64;
