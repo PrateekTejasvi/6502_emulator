@@ -1,4 +1,5 @@
 #pragma once
+#include<stdint.h>
 
 typedef unsigned char Byte;
 typedef unsigned short Word;
@@ -33,6 +34,8 @@ Byte addr_zero_page_y(CPU *cpu, Mem *mem, unsigned int *ticks);
 Byte addr_absolute   (CPU *cpu, Mem *mem, unsigned int *ticks);
 Byte addr_absolute_x (CPU *cpu, Mem *mem, unsigned int *ticks);
 Byte addr_absolute_y (CPU *cpu, Mem *mem, unsigned int *ticks);
+
+Word addr_relative(CPU*cpu,Mem *mem,unsigned int *ticks);
 
 /* Write-mode variants*/
 Word addr_zp_write   (CPU *cpu, Mem *mem, unsigned int *ticks);

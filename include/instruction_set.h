@@ -55,6 +55,21 @@
 #define INS_ADC_ABS_Y 0x79
 #define INS_ADC_IND_X 0x61
 #define INS_ADC_IND_Y 0x71
+//AND INSTRUCTIONS
+#define INS_AND_IM 0x29
+#define INS_AND_ZP 0x25
+#define INS_AND_ZP_X 0x35
+#define INS_AND_ABS 0x2D
+#define INS_AND_ABS_X 0x3D
+#define INS_AND_ABS_Y 0x39
+#define INS_AND_IND_X 0x21
+#define INS_AND_IND_Y 0x31
+//ASL INSTRUCTIONS
+#define INS_ASL_ACCM 0x0A
+#define INS_ASL_ZP 0x06
+#define INS_ASL_ZP_X 0x16
+#define INS_ASL_ABS 0x0E
+#define INS_ASL_ABS_X 0x1E
 
 //merge LDA instructions
 void Execute_INS_LDA(CPU*,Byte);

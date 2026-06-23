@@ -150,3 +150,10 @@ Word addr_abs_y_write(CPU *cpu, Mem *mem, unsigned int *ticks){
     return final_address;
 
 }
+
+//implementing remaining addressing modes
+
+Word addr_relative(CPU *cpu,Mem *mem,unsigned int *ticks){
+    int8_t offset = (int8_t)FetchByte(cpu, mem, ticks);
+    return cpu->PC+offset;
+}
