@@ -1,0 +1,150 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GTest::GTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GTest__GTest-cdacc2e1af65c7da9326.json",
+					"name" : "GTest::GTest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GTest::Main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GTest__Main-4437cfbf1cf2a7b36b81.json",
+					"name" : "GTest::Main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GTest::gmock::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GTest__gmock-e828a7f3f875d5c62953.json",
+					"name" : "GTest::gmock",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GTest::gmock_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GTest__gmock_main-a0ee379e507476b4eae9.json",
+					"name" : "GTest::gmock_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GTest::gtest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GTest__gtest-47f5124bccfe9e06da68.json",
+					"name" : "GTest::gtest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "GTest::gtest_main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GTest__gtest_main-ebec297328cce87379d3.json",
+					"name" : "GTest::gtest_main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Threads::Threads::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Threads__Threads-092b30d66f560c280b0e.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-fd6451d79dc282e2f566.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "6502",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "emulator::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-emulator-71deac178f37a43c725c.json",
+					"name" : "emulator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "emulator_core::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-emulator_core-ed3586ba147a912daf89.json",
+					"name" : "emulator_core",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "emulator_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-emulator_tests-519457e777757263158a.json",
+					"name" : "emulator_tests",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/prateektejasvi/programs/6502/build",
+		"source" : "/Users/prateektejasvi/programs/6502"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	}
+}

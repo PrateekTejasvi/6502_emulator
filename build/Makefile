@@ -261,53 +261,29 @@ src/memory.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_core.dir/build.make CMakeFiles/emulator_core.dir/src/memory.c.s
 .PHONY : src/memory.c.s
 
-tests/test_lda.o: tests/test_lda.cpp.o
-.PHONY : tests/test_lda.o
+tests/test_adc.o: tests/test_adc.cpp.o
+.PHONY : tests/test_adc.o
 
 # target to build an object file
-tests/test_lda.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o
-.PHONY : tests/test_lda.cpp.o
+tests/test_adc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o
+.PHONY : tests/test_adc.cpp.o
 
-tests/test_lda.i: tests/test_lda.cpp.i
-.PHONY : tests/test_lda.i
-
-# target to preprocess a source file
-tests/test_lda.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.i
-.PHONY : tests/test_lda.cpp.i
-
-tests/test_lda.s: tests/test_lda.cpp.s
-.PHONY : tests/test_lda.s
-
-# target to generate assembly for a file
-tests/test_lda.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.s
-.PHONY : tests/test_lda.cpp.s
-
-tests/test_main.o: tests/test_main.cpp.o
-.PHONY : tests/test_main.o
-
-# target to build an object file
-tests/test_main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o
-.PHONY : tests/test_main.cpp.o
-
-tests/test_main.i: tests/test_main.cpp.i
-.PHONY : tests/test_main.i
+tests/test_adc.i: tests/test_adc.cpp.i
+.PHONY : tests/test_adc.i
 
 # target to preprocess a source file
-tests/test_main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_main.cpp.i
-.PHONY : tests/test_main.cpp.i
+tests/test_adc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.i
+.PHONY : tests/test_adc.cpp.i
 
-tests/test_main.s: tests/test_main.cpp.s
-.PHONY : tests/test_main.s
+tests/test_adc.s: tests/test_adc.cpp.s
+.PHONY : tests/test_adc.s
 
 # target to generate assembly for a file
-tests/test_main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_main.cpp.s
-.PHONY : tests/test_main.cpp.s
+tests/test_adc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emulator_tests.dir/build.make CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.s
+.PHONY : tests/test_adc.cpp.s
 
 # Help Target
 help:
@@ -333,12 +309,9 @@ help:
 	@echo "... src/memory.o"
 	@echo "... src/memory.i"
 	@echo "... src/memory.s"
-	@echo "... tests/test_lda.o"
-	@echo "... tests/test_lda.i"
-	@echo "... tests/test_lda.s"
-	@echo "... tests/test_main.o"
-	@echo "... tests/test_main.i"
-	@echo "... tests/test_main.s"
+	@echo "... tests/test_adc.o"
+	@echo "... tests/test_adc.i"
+	@echo "... tests/test_adc.s"
 .PHONY : help
 
 

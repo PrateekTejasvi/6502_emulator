@@ -72,51 +72,34 @@ include CMakeFiles/emulator_tests.dir/flags.make
 CMakeFiles/emulator_tests.dir/codegen:
 .PHONY : CMakeFiles/emulator_tests.dir/codegen
 
-CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o: CMakeFiles/emulator_tests.dir/flags.make
-CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o: /Users/prateektejasvi/programs/6502/tests/test_main.cpp
-CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o -MF CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o.d -o CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_main.cpp
+CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o: CMakeFiles/emulator_tests.dir/flags.make
+CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o: /Users/prateektejasvi/programs/6502/tests/test_adc.cpp
+CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o -MF CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o.d -o CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_adc.cpp
 
-CMakeFiles/emulator_tests.dir/tests/test_main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/emulator_tests.dir/tests/test_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prateektejasvi/programs/6502/tests/test_main.cpp > CMakeFiles/emulator_tests.dir/tests/test_main.cpp.i
+CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prateektejasvi/programs/6502/tests/test_adc.cpp > CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.i
 
-CMakeFiles/emulator_tests.dir/tests/test_main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/emulator_tests.dir/tests/test_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prateektejasvi/programs/6502/tests/test_main.cpp -o CMakeFiles/emulator_tests.dir/tests/test_main.cpp.s
-
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o: CMakeFiles/emulator_tests.dir/flags.make
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o: /Users/prateektejasvi/programs/6502/tests/test_lda.cpp
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o: CMakeFiles/emulator_tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o -MF CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o.d -o CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_lda.cpp
-
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/prateektejasvi/programs/6502/tests/test_lda.cpp > CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.i
-
-CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prateektejasvi/programs/6502/tests/test_lda.cpp -o CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.s
+CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/prateektejasvi/programs/6502/tests/test_adc.cpp -o CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.s
 
 # Object files for target emulator_tests
 emulator_tests_OBJECTS = \
-"CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o" \
-"CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o"
+"CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o"
 
 # External object files for target emulator_tests
 emulator_tests_EXTERNAL_OBJECTS =
 
-emulator_tests: CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o
-emulator_tests: CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o
+emulator_tests: CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o
 emulator_tests: CMakeFiles/emulator_tests.dir/build.make
 emulator_tests: libemulator_core.a
-emulator_tests: /opt/homebrew/lib/libgtest.a
 emulator_tests: /opt/homebrew/lib/libgtest_main.a
 emulator_tests: /opt/homebrew/lib/libgtest.a
 emulator_tests: CMakeFiles/emulator_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable emulator_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/prateektejasvi/programs/6502/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable emulator_tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/emulator_tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

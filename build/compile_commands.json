@@ -25,14 +25,8 @@
 },
 {
   "directory": "/Users/prateektejasvi/programs/6502/build",
-  "command": "/usr/bin/c++  -I/Users/prateektejasvi/programs/6502/include -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_main.cpp",
-  "file": "/Users/prateektejasvi/programs/6502/tests/test_main.cpp",
-  "output": "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o"
-},
-{
-  "directory": "/Users/prateektejasvi/programs/6502/build",
-  "command": "/usr/bin/c++  -I/Users/prateektejasvi/programs/6502/include -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_lda.cpp",
-  "file": "/Users/prateektejasvi/programs/6502/tests/test_lda.cpp",
-  "output": "CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o"
+  "command": "/usr/bin/c++  -I/Users/prateektejasvi/programs/6502/include -isystem /opt/homebrew/include -std=gnu++17 -arch arm64 -o CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o -c /Users/prateektejasvi/programs/6502/tests/test_adc.cpp",
+  "file": "/Users/prateektejasvi/programs/6502/tests/test_adc.cpp",
+  "output": "CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o"
 }
 ]

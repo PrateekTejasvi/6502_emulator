@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o"
-  "CMakeFiles/emulator_tests.dir/tests/test_lda.cpp.o.d"
-  "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o"
-  "CMakeFiles/emulator_tests.dir/tests/test_main.cpp.o.d"
+  "CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o"
+  "CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o.d"
   "emulator_tests"
   "emulator_tests.pdb"
 )

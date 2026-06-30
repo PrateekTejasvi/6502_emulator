@@ -26,7 +26,8 @@ typedef struct CPU {
 
 
 }CPU;
-
+typedef void (*InstructionHandler)(CPU*,Mem*,unsigned int *); //function pointer
+void execute_action(CPU*,Mem*,unsigned int);
 void SetFlag(CPU *cpu,Byte flag , int value);
 void Execute(CPU *cpu , Mem *mem , unsigned int ticks);
 void Reset(CPU *cpu, Mem *mem);

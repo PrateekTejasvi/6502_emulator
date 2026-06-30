@@ -1,8 +1,80 @@
 #include "cpu.h"
 #include "instruction_set.h"
 #include "memory.h"
-#include <complex.h>
+#include<stdio.h>
 #include <stdint.h>
+//function pointer
+void EX_INS_LDA_IM(CPU *cpu,Mem* mem ,unsigned int *ticks){
+    Byte value = addr_immediate(cpu,mem,ticks);
+    Execute_INS_LDA(cpu,value);
+}
+
+void EX_INS_LDA_ZP(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_zero_page(cpu, mem, ticks);
+    Execute_INS_LDA(cpu,value);
+}
+
+void EX_INS_LDA_ZP_X(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_zero_page_x(cpu, mem, ticks);
+    Execute_INS_LDA(cpu,value);
+}
+
+void EX_INS_LDA_ABS(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_absolute(cpu, mem, ticks);
+    Execute_INS_LDA(cpu,value);
+}
+void EX_INS_LDA_ABS_X(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_absolute_x(cpu, mem,ticks);
+    Execute_INS_LDA(cpu,value);
+}
+void EX_INS_LDA_ABS_Y(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_absolute_y(cpu,mem,ticks);
+    Execute_INS_LDA(cpu,value);
+}
+
+void EX_INS_LDX_IM(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_immediate(cpu,mem,ticks);
+    Execute_INS_LDX(cpu,value);
+}
+
+void EX_INS_LDX_ZP(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_zero_page(cpu, mem, ticks);
+    Execute_INS_LDX(cpu,value);
+}
+void EX_INS_LDX_ZP_Y(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_zero_page_y(cpu, mem, ticks);
+    Execute_INS_LDX(cpu,value);
+}
+void EX_INS_LDX_ABS(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_absolute(cpu, mem, ticks);
+    Execute_INS_LDX(cpu,value);
+}
+void EX_INS_LDX_ABS_Y(CPU *cpu,Mem *mem,unsigned int *ticks){
+    Byte value = addr_absolute_y(cpu, mem, ticks);
+    Execute_INS_LDX(cpu,value);
+}
+
+
+
+InstructionHandler handleIns[] = {
+    [INS_LDA_IM] = EX_INS_LDA_IM,
+    [INS_LDA_ZP] = EX_INS_LDA_ZP,
+    [INS_LDA_ZP_X] = EX_INS_LDA_ZP_X,
+    [INS_LDA_ABS] = EX_INS_LDA_ABS,
+    [INS_LDA_ABS_X] = EX_INS_LDA_ABS_X,
+    [INS_LDA_ABS_Y] = EX_INS_LDA_ABS_Y,
+
+};
+
+void execute_action(CPU *cpu,Mem *mem,unsigned int ticks){
+    Byte opCode = FetchByte(cpu, mem, &ticks);
+    if(handleIns[opCode]!=NULL){
+        handleIns[opCode](cpu,mem,&ticks);
+    }
+    else{
+        printf("illegal opcode");
+    }
+}
 
 void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
 
@@ -10,39 +82,6 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
         if(ticks == 0)break;
         Byte Ins = FetchByte(cpu,mem,&ticks);
         switch(Ins){
-            case INS_LDA_IM:{
-                Byte value = addr_immediate(cpu,mem, &ticks);
-                Execute_INS_LDA(cpu,value);
-                break;
-            }
-            case INS_LDA_ZP:{
-                    Byte value  = addr_zero_page(cpu, mem,&ticks);
-                    Execute_INS_LDA(cpu,value);
-                    break;
-            }
-            case INS_LDA_ABS:{
-                    Byte value = addr_absolute(cpu, mem, &ticks);
-                    Execute_INS_LDA(cpu,value);
-                break;
-            }
-
-            case INS_LDA_ZP_X:{
-                Byte value = addr_zero_page_x(cpu, mem, &ticks);
-                Execute_INS_LDA(cpu,value);
-                break;
-            }
-//TODO:LDA_ABS_X/Y can take an extra clock cylce 4+1 depending on the wrapping
-            case INS_LDA_ABS_X:{
-                Byte value = addr_absolute_x(cpu, mem, &ticks);
-                Execute_INS_LDA(cpu,value);
-                break;
-            }
-
-            case INS_LDA_ABS_Y:{
-                Byte value = addr_absolute_y(cpu,mem,&ticks);
-                Execute_INS_LDA(cpu,value);
-                break;
-            }
 //INSTRUCTION SET FOR LDX
 
             case INS_LDX_IM:{
@@ -190,8 +229,19 @@ void Execute(CPU *cpu,Mem *mem,unsigned int ticks){
                 ticks--;
                 break;
             }
+            case INS_ADC_IM:{
+                Byte value = addr_immediate(cpu,mem,&ticks);
+                Execute_INS_ADC(cpu,mem,value);
+                break;
+            }
+            case INS_ADC_ABS:{
+                Word value = addr_absolute(cpu, mem, &ticks);
+                Execute_INS_ADC(cpu,mem,value);
+                break;
+
+            }
     }
-}
+    }
 }
 
 void SetFlag(CPU *cpu,Byte flag , int value){

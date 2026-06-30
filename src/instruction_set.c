@@ -1,4 +1,5 @@
 #include"instruction_set.h"
+#include "cpu.h"
 static void INS_LDA (CPU *cpu, Byte value){
     cpu->A = value;
     SetFlag(cpu,FLAG_Z,cpu->A == 0);
@@ -60,6 +61,17 @@ static void INS_TXS(CPU *cpu){
     cpu->SP = cpu->X ;
     //does not update flags
 }
+static void INS_ADC(CPU *cpu,Mem* mem,Byte value){
+    Byte prevA = cpu->A;
+    Byte carryIn = (cpu->Status & FLAG_C) ? 1 : 0 ;
+    Word sum = carryIn+prevA+value;
+    Word result = sum & 0xFF;
+    cpu->A = result;
+    SetFlag(cpu,FLAG_N,cpu->A &0x80);
+    SetFlag(cpu, FLAG_C, (sum>0xFF));
+    SetFlag(cpu, FLAG_Z, cpu->A==0);
+    SetFlag(cpu,FLAG_V,(~(prevA ^ value) & (prevA & result) & 0x80) != 0);
+}
 
 void Execute_INS_LDA(CPU *cpu,Byte value){
     INS_LDA(cpu,value);
@@ -98,4 +110,8 @@ void Execute_INS_TSX(CPU *cpu){
 }
 void Execute_INS_TXS(CPU *cpu){
     INS_TXS(cpu);
+}
+
+void Execute_INS_ADC(CPU *cpu,Mem* mem,Byte value){
+    INS_ADC(cpu,mem,value);
 }

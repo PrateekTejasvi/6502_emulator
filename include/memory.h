@@ -1,5 +1,4 @@
 #pragma once
-#include<stdint.h>
 
 typedef unsigned char Byte;
 typedef unsigned short Word;

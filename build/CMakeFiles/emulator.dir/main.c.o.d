@@ -85,7 +85,7 @@ CMakeFiles/emulator.dir/main.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_abort.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/prateektejasvi/programs/6502/include/instruction_set.h \
   /Users/prateektejasvi/programs/6502/include/cpu.h \
   /Users/prateektejasvi/programs/6502/include/memory.h \
-  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h
+  /Library/Developer/CommandLineTools/usr/lib/clang/21/include/stdbool.h \
+  /Users/prateektejasvi/programs/6502/include/instruction_set.h
