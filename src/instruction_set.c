@@ -62,15 +62,23 @@ static void INS_TXS(CPU *cpu){
     //does not update flags
 }
 static void INS_ADC(CPU *cpu,Mem* mem,Byte value){
-    Byte prevA = cpu->A;
+    Byte AccumlatorValue = cpu->A;
     Byte carryIn = (cpu->Status & FLAG_C) ? 1 : 0 ;
-    Word sum = carryIn+prevA+value;
+    Word sum = carryIn+AccumlatorValue+value;
     Word result = sum & 0xFF;
     cpu->A = result;
     SetFlag(cpu,FLAG_N,cpu->A &0x80);
     SetFlag(cpu, FLAG_C, (sum>0xFF));
     SetFlag(cpu, FLAG_Z, cpu->A==0);
-    SetFlag(cpu,FLAG_V,(~(prevA ^ value) & (prevA & result) & 0x80) != 0);
+    SetFlag(cpu,FLAG_V,(~(AccumlatorValue^ value) & (AccumlatorValue & result) & 0x80) != 0);
+}
+
+static void INS_AND(CPU *cpu,Mem *mem,Byte value){
+    Byte AccumlatorValue = cpu -> A;
+    Byte result = AccumlatorValue & value;
+    cpu->A = result;
+    SetFlag(cpu,FLAG_Z,cpu->A ==0x00);
+    SetFlag(cpu,FLAG_N ,cpu->A&0x80);
 }
 
 void Execute_INS_LDA(CPU *cpu,Byte value){
@@ -114,4 +122,7 @@ void Execute_INS_TXS(CPU *cpu){
 
 void Execute_INS_ADC(CPU *cpu,Mem* mem,Byte value){
     INS_ADC(cpu,mem,value);
+}
+void Execute_INS_AND(CPU *cpu , Mem *mem, Byte value){
+    INS_AND(cpu,mem,value);
 }

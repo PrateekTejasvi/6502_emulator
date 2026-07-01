@@ -152,3 +152,10 @@ Word addr_abs_y_write(CPU *cpu, Mem *mem, unsigned int *ticks){
 }
 
 //implementing remaining addressing modes
+
+
+Byte RelativeAddressing(CPU *cpu,Mem *mem ,unsigned int *ticks){
+    Byte offset = FetchByte(cpu, mem, ticks);
+    if(offset& 0x80 )offset|=0xFF00;
+    return 0;
+}

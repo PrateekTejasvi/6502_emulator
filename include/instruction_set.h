@@ -99,3 +99,4 @@ void Execute_INS_TXS(CPU *);
 void Execute_INS_TYA(CPU *);
 // ADC INSTRUCTIONS
 void Execute_INS_ADC(CPU *, Mem *, Byte);
+void Execute_INS_AND(CPU *,Mem*,Byte);
