@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/emulator_tests.dir/tests/test_adc.cpp.o -o emulator_tests  libemulator_core.a /opt/homebrew/lib/libgtest_main.a /opt/homebrew/lib/libgtest.a
