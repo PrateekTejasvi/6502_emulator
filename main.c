@@ -28,50 +28,11 @@ Init(&mem);
 mem.Data[0xFFFC] = 0x00;
 mem.Data[0xFFFD] = 0x80;
 
+mem.Data[0x8000]=INS_LDA_IM;
+mem.Data[0x8001]=0x42;
 
-    mem.Data[0x0010] = 0x11;   // ZP
-    mem.Data[0x0025] = 0x22;   // ZP,X (0x20 + X)
-
-    mem.Data[0x3000] = 0x33;   // ABS
-    mem.Data[0x4005] = 0x44;   // ABS,X (0x4000 + X)
-    mem.Data[0x5003] = 0x55;   // ABS,Y (0x5000 + Y)
-
-    /* Program */
-
-    /* LDA #$42 */
-    mem.Data[0x8000] = INS_LDA_IM;
-    mem.Data[0x8001] = 0x42;
-
-    /* LDX #$05 */
-    mem.Data[0x8002] = INS_LDX_IM;
-    mem.Data[0x8003] = 0x05;
-
-    /* LDY #$03 */
-    mem.Data[0x8004] = INS_LDY_IM;
-    mem.Data[0x8005] = 0x03;
-
-    /* LDA $10 */
-    mem.Data[0x8006] = INS_LDA_ZP;
-    mem.Data[0x8007] = 0x10;
-
-    /* LDA $20,X -> $25 */
-    mem.Data[0x8008] = INS_LDA_ZP_X;
-    mem.Data[0x8009] = 0x20;
-
-    /* LDA $3000 */
-    mem.Data[0x800A] = INS_LDA_ABS;
-    mem.Data[0x800B] = 0x00;
-    mem.Data[0x800C] = 0x30;
-
-    /* LDA $4000,X -> $4005 */
-    mem.Data[0x800D] = INS_LDA_ABS_X;
-    mem.Data[0x800E] = 0x00;
-    mem.Data[0x800F] = 0x40;
-
-    /* LDA $5000,Y -> $5003 */
-    mem.Data[0x8010] = INS_LDA_ABS_Y;
-    mem.Data[0x8011] = 0x00;
-    mem.Data[0x8012] = 0x50;
+mem.Data[0x8002]=INS_STA_ZP;
+mem.Data[0x8003]=0x34;
 
 Reset(&cpu,&mem);
 
@@ -81,7 +42,7 @@ printf("A:%02X\n",cpu.A);
 printf("X:%02X\n",cpu.X);
 printf("Y:%02X\n",cpu.Y);
 
-printf("mem[0010]:%02X\n",mem.Data[0x0010]);
+printf("mem[0034]:%02X\n",mem.Data[0x0034]);
 printf("mem[0025]:%02X\n",mem.Data[0x0025]);
 printf("mem[0023]:%02X\n",mem.Data[0x0023]);
 

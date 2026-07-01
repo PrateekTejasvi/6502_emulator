@@ -31,6 +31,10 @@ typedef enum {
   INS_STA_ABS_X = 0x9D,
   INS_STA_ABS_Y = 0x99,
 
+  INS_STX_ZP = 0x86,
+  INS_STX_ZP_Y=0x96,
+  INS_STX_ABS =0x8E,
+
   INS_STY_ZP = 0x84,
   INS_STY_ZP_X = 0x94,
   INS_STY_ABS = 0x8C,
